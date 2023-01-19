@@ -41,7 +41,7 @@
 
 **Yigao**:
 
-- TODO
+- Worked on Requirements & Team Policies, No issue to report.
 
 **Chuteng**:
 
@@ -67,7 +67,8 @@
 
 **Yigao**:
 
-- TODO
+- Start to define generic reservation datatype
+- Start to connect the generic datatype with seperate systems
 
 **Chuteng**:
 
