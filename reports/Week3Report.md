@@ -57,6 +57,7 @@
 
 **Yingfan**:
 
+- Proposal feedback: shared original proposal with project members to better align MVPs with the class scope.
 - Requirements writeup: worked on _Team Info & Policies_, _Functional & Non-functional Requirements_, _Team process description_, and _Use Case_ on course->room navigation.
 - Git setup: created project repo and add teammates as collaborators.
 
@@ -81,4 +82,4 @@
 **Yingfan**:
 
 - Go through tutorials on Google Maps API, and starting experimenting campus map
-- Design backend API endpoints and functions
+- Start designing backend API endpoints and functions
