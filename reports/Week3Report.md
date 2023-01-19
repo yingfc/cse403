@@ -38,15 +38,39 @@
 ### Progress and issues
 
 **Yigao**:
+
+- TODO
+
 **Chuteng**:
+
+- TODO
+
 **Fengyi**:
+
+- TODO
+
 **Wajdi**:
 **Yingfan**:
+
+- Requirements writeup: worked on _Team Info & Policies_, _Functional & Non-functional Requirements_, _Team process description_, and _Use Case_ on course->room navigation.
+- Git setup: created project repo and add teammates as collaborators.
 
 ### Plan for Next Week
 
 **Yigao**:
+
+- TODO
+
 **Chuteng**:
+
+- TODO
+
 **Fengyi**:
+
+- TODO
+
 **Wajdi**:
 **Yingfan**:
+
+- Go through tutorials on Google Maps API, and starting experimenting campus map
+- Design backend API endpoints and functions
