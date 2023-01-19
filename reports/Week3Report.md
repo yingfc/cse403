@@ -40,7 +40,7 @@
 **Yigao**:
 **Chuteng**:
 **Fengyi**:
-**Wajdi**:
+**Wajdi**: Worked on different parts for the first assignment. No issues to report.
 **Yingfan**:
 
 ### Plan for Next Week
@@ -48,5 +48,5 @@
 **Yigao**:
 **Chuteng**:
 **Fengyi**:
-**Wajdi**:
+**Wajdi**: Set up git, start planning the steps of working on the project and dividing tasks, possibly start coding the map backend
 **Yingfan**:
