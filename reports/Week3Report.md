@@ -21,9 +21,11 @@
 - Determined team roles
 - Finished requirements writeup
 - Determined major features of projects
+- Brainstormed everything :-)
 
 ### Plan for Next Week
 
+- All teammates setup Git
 - Determine project architecture (frontend + backend)
 - Start experimenting with frameworks/tools
 
