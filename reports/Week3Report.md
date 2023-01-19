@@ -51,7 +51,7 @@
 
 **Fengyi**:
 
-- TODO
+- Worked on the Requirements & Team Policies: Team process description and Use Cases.
 
 **Wajdi**:
 
@@ -76,7 +76,7 @@
 
 **Fengyi**:
 
-- TODO
+- Design and build a database to store information of dining places
 
 **Wajdi**:
 
