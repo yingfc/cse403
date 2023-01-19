@@ -50,6 +50,9 @@
 - TODO
 
 **Wajdi**:
+
+- Worked on different parts for the first assignment. No issues to report.
+
 **Yingfan**:
 
 - Requirements writeup: worked on _Team Info & Policies_, _Functional & Non-functional Requirements_, _Team process description_, and _Use Case_ on course->room navigation.
@@ -70,6 +73,9 @@
 - TODO
 
 **Wajdi**:
+
+- Set up git, start planning the steps of working on the project and dividing tasks, possibly start coding the map backend
+
 **Yingfan**:
 
 - Go through tutorials on Google Maps API, and starting experimenting campus map
