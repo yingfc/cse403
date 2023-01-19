@@ -45,11 +45,13 @@
 
 **Chuteng**:
 
-- TODO
+- Worked on setting up figma for front-end design
+- Synced up local repo
+- Looked up API we can use
 
 **Fengyi**:
 
-- Worked on the Requirements & Team Policies: Team process description and Use Cases.
+- TODO
 
 **Wajdi**:
 
@@ -69,11 +71,12 @@
 
 **Chuteng**:
 
-- TODO
+- Start to setup the local dev environment
+- Start to implement the front-end and band-end coding
 
 **Fengyi**:
 
-- Design and build a database to store information of dining places
+- TODO
 
 **Wajdi**:
 
