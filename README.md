@@ -16,15 +16,20 @@
 
 - Linked with MyUW, and automatically generate routine among each classroom per day, without human intervention.
 - Try to suggest and lead students to an appropriate study place during the spare time between lectures, according to routine, time, and facility requirements, saving time for finding spots.
-- Optimize facilities usage in general
-- Have a centralized platform through which you can explore your options of room reservation through campus
+- Optimize facilities usage in general by integrating classrooms on the map with the
+associates class code. For example, the user would be able to search for building with
+class code, and the user would be able to get a list of classes in the building.
+- Have a centralized platform through which the users can explore their options of room reservation through campus
 
 
 
 ---
 
 ### Repository layout
-The Repository focuses mainly on splitting the backend and the frontend components of the project. The backend portion currently has a db folder that will keep track of the databases of available rooms and reserved rooms and assign students their reserved rooms. Further segmentation when we start interacting with different UW databases and APIs to get their list of rooms and update reservation information in both environments. The frontend portion simply contains a components folder that will be segmented further later on for each component added to the webpage with desceptive folder names. 
+The Repository focuses mainly on splitting the backend and the frontend components of the project. The backend portion currently has a db folder that will keep track of the databases of available rooms and reserved rooms and assign students their reserved rooms. Further segmentation when we start interacting with different UW databases and APIs to get their list of rooms and update reservation information in both environments. The frontend portion simply contains a components folder that will be segmented further later on for each component added to the webpage with desceptive folder names.
+
+### Tool sets
+This frontend of this project will be implemented with React.js and the backend will use Node.js with typescript.
 
 ```
 📦 cse403
