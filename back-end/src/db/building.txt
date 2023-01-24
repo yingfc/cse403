@@ -22,6 +22,7 @@ CMU - Communications Building
 CNH - Canoe House
 COH - Children's Hospital (Off campus)
 CSE - Paul G. Allen Center for Computer Science & Engineering
+CSE2 - Bill & Melinda Gates Center for Computer Science & Engineering
 CSH - Conibear Shellhouse
 DEN - Denny Hall
 DEM - Dempsey Hall
