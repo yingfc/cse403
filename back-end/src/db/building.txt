@@ -1,0 +1,130 @@
+ACC - John M. Wallace Hall (formerly Academic Computing Center)
+AER - Aerospace & Engineering Research Building
+ALB - Allen Library
+AND - Anderson Hall
+ARC - Architecture Hall
+ART - Art Building
+ATG - Atmos Sci/Geophysics
+BAG - Bagley Hall
+BGH - Botany Greenhouse
+BIOE - W.H. Foege Bioengineering Building
+BLD - Bloedel Hall
+BMM - Burke Memorial Museum
+BNS - Benson Hall
+BRY - Bryant Building
+CDH - Condon Hall
+CHB - Chemistry Building
+CHCL - Center on Human Development and Disability
+CHL - Chemistry Library Building
+CLK - Clark Hall
+CMA - Ceramic and Metal Arts Building
+CMU - Communications Building
+CNH - Canoe House
+COH - Children's Hospital (Off campus)
+CSE - Paul G. Allen Center for Computer Science & Engineering
+CSH - Conibear Shellhouse
+DEN - Denny Hall
+DEM - Dempsey Hall
+DRC - Douglas Research Conservatory
+DSC - 3941 University Way N.E.
+ECC - Ethnic Cultural Center
+EDP - Edmundson Pavilion
+EEB - Electrical Engineering Building
+EGA - Engineering Annex
+EGL - Eagleson Hall
+ELB - Engineering Library
+EXED - Bank of America Executive Education Center and Foster Library
+FIS - Fisheries Center
+FLK - Fluke Hall
+FRH - Friday Harbor Laboratories (Off campus)
+FSH - Fisheries Building
+FTR - Fisheries Teaching Research Building
+GA1 - Guthrie Annex 1
+GA2 - Guthrie Annex 2
+GA3 - Guthrie Annex 3
+GDR - Golf Driving Range
+GHH - Group Health Hospital (Off campus)
+GLD - Gould Hall
+GNOM - W.H. Foege Genome Sciences Building
+GRB - Gerberding Hall (Administration)
+GTH - Guthrie Hall
+GUG - Guggenheim Hall
+GWN - Gowen Hall
+HAG - Henry Art Gallery
+HCK - Hitchcock Hall
+HGT - Haggett Hall
+HHL - Harris Hydraulics Lab
+HLL - Hall Health Center
+HMC - Harborview Medical Center (Off campus)
+HND - Henderson Hall
+HPT - Hughes Penthouse Theater
+HRC - Fred Hutchinson Cancer Research Center (Off campus)
+HS4 - Health Sciences Annex 4
+HSA - Health Sciences Building wings A, B, & C
+HSB - Health Sciences Building wings AA and BB
+HSD - Health Sciences Building wings D, F, G, & H
+HSE - Health Sciences Building wing E
+HSI - Health Sciences Building wing I
+HSJ - Health Sciences Building wing J
+HSK - Health Sciences Building wing K
+HSRR - Health Sciences Building wing RR
+HST - Health Sciences Building wing T
+HUB - Student Union Building
+HUT - Hutchinson Hall
+ICH - Cunningham Hall
+ICT - Samuel E. Kelly Ethnic Cultural Center
+IMA - Intramural Activities Building
+JHA - Johnson Annex
+JHN - Johnson Hall
+KIN - Kincaid Hall
+KNE - Kane Hall
+LAW - William H. Gates Hall
+LEW - Lewis Hall
+LOW - Loew Hall
+MAR - Marine Studies Building
+MEB - Mechanical Engineering Building
+MGH - Mary Gates Hall
+MKZ - Mackenzie Hall
+MLR - Miller Hall
+MNY - Meany Hall
+MOR - More Hall
+MSB - Marine Sciences Building
+MUE - Mueller Hall
+MUS - Music Building
+NOC - Not On Campus
+NRB - Nuclear Reactor Building
+OBS - Observatory
+OCE - Oceanography Building
+OCN - Ocean Sciences Building
+OTB - Oceanography Teaching Building
+OUG - Odegaard Undergrad Library
+PAA - Physics Astronomy Auditorium(13-K)
+PAB - Physics Astronomy Bar
+PAT - Physics Astronomy Tower(12-J)
+PAR - Parrington Hall
+PCAR - Paccar Hall
+PDL - Padelford Hall
+PHT - Playhouse Theater
+PLT - Plant Laboratory
+PSC - Pacific Science Center (Off campus)
+ATG - Quaternary Research Center (Officially part of the Atmos Sci/Geophysics Building)
+RAI - Raitt Hall
+ROB - Roberts Hall
+RTB - Benjamin Hall, Interdiciplinary Research & Technology Building
+RVC - Roosevelt Commons
+SAV - Savery Hall
+SGS - Community Design Building-3947 Univ Way
+SIG - Sieg Hall
+SMI - Smith Hall
+SMZ - Schmitz Hall
+SOCC - South Campus Center
+SUZ - Suzzallo Library
+SWS - Social Work/Speech and Hearing Sciences Building
+TER - Terry Hall (10-F)
+TGB - Graves Building
+THO - Thomson Hall
+UMCC - University Medical Center wings CC, EE, NE, NN, NW, SE, SS, & SW
+UMSP - University Medical Center, Surgery and Treatment Pavilion
+WCL - Wilson Ceramic Laboratory
+WFS - Winkenwerder Forest Science Lab
+WIL - Wilcox Hall
