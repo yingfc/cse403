@@ -79,6 +79,7 @@
 
 - Requirements writeup fix: re-wrote _External Requirements_ and _Use Case_ on the requirements document
 - Git setup: Add top-level README to repo, and add bookmarks to repo & living documents to Slack channel
+- Created central database on GCP, add table `building` and setup mysql connection demo
 - Working on course->room database design, clarify tables nad attributes
 - Started looking at Google Maps Route API
 
@@ -103,4 +104,4 @@
 **Yingfan**:
 
 - Experimenting Route API on taking building name with latitude & longitude -> Route output
-- Implement database tables on `course`, `building`
+- Fetch data and create new table on `course` in the central database
