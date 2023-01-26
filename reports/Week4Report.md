@@ -100,7 +100,8 @@
 
 **Chuteng**:
 
-- TODO
+- Learn Google map API generate map on UI
+- Implement basic layout for the front-end
 
 **Fengyi**:
 
