@@ -26,7 +26,7 @@
 
 ### Plan for Next Week
 
-- TODO
+- TO DO
 
 ---
 
@@ -61,7 +61,9 @@
 
 **Yigao**:
 
-- TODO
+- Re-write _Use Case_ on requirements document
+- Splits pages, styles, and functions
+- Working on User Home page, and room reservation subpage
 
 **Chuteng**:
 
@@ -87,7 +89,9 @@
 
 **Yigao**:
 
-- TODO
+- Finish User homepage, and room reservation subpage
+- Learn to generate Map page based on Google Maps API
+- Start to work on the advanced filter function, and advanced search page
 
 **Chuteng**:
 
