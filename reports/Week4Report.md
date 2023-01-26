@@ -75,7 +75,8 @@
 
 **Fengyi**:
 
-- TODO
+- Edit Use Case on requirement
+- Working on the dining search feature design 
 
 **Wajdi**:
 
@@ -103,7 +104,8 @@
 
 **Fengyi**:
 
-- TODO
+- Design dining information searching subpage
+- Finish building data model for dining information 
 
 **Wajdi**:
 
