@@ -26,7 +26,6 @@ class code, and the user would be able to get a list of classes in the building.
 ---
 
 ### Repository layout
-The Repository focuses mainly on splitting the backend and the frontend components of the project. The backend portion currently has a db folder that will keep track of the databases of available rooms and reserved rooms and assign students their reserved rooms. Further segmentation when we start interacting with different UW databases and APIs to get their list of rooms and update reservation information in both environments. The frontend portion simply contains a components folder that will be segmented further later on for each component added to the webpage with desceptive folder names.
 
 ### Tool sets
 This frontend of this project will be implemented with React.js and the backend will use Node.js with typescript.
@@ -36,11 +35,11 @@ This frontend of this project will be implemented with React.js and the backend 
  ┃
  ┣ 📂 back-end
  ┃ ┗ 📂 src
- ┃ ┃ ┗ 📂 db
+ ┃ ┃ ┗ 📂 db (keeps track of the databases of available rooms and reserved rooms and assign students their reserved rooms)
  ┃ ┃ ┃ ┗ 📜.gitkeep
  ┣ 📂 font-end
  ┃ ┗ 📂 src
- ┃ ┃ ┗ 📂 components
+ ┃ ┃ ┗ 📂 components (contains different components of the webpage, subject to further segmentation later on)
  ┃ ┃ ┃ ┗ 📜.gitkeep
  ┣ 📂 reports
  ┃ ┗ 📜 Week3Report.md
