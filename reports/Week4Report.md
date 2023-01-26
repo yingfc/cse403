@@ -26,7 +26,9 @@
 
 ### Plan for Next Week
 
-- TO DO
+- Plan basic system structure for the frontend and backend
+- Design layout and interface for the frontend
+- If we have time, initialize the packages and project template we're going to use
 
 ---
 
@@ -67,7 +69,9 @@
 
 **Chuteng**:
 
-- TODO
+- Re-write Use Cases on requirement doc based on feedback
+- Planed and designed the structure of the source code
+- Worked on researching API that we can use
 
 **Fengyi**:
 
