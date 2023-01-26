@@ -80,7 +80,8 @@
 
 **Wajdi**:
 
-- TODO
+- Requierments writeup fix, External requirments, fixed use cases
+- started developing ideas for the backend development of the project
 
 **Yingfan**:
 
@@ -110,7 +111,8 @@
 
 **Wajdi**:
 
-- TODO
+- Look into APIs to develop room reservation service mainly the database for all the rooms
+- determine project architecture and discuss with team
 
 **Yingfan**:
 
