@@ -35,7 +35,7 @@
 
 **Yigao**:
 
-- Finish User homepage, and room reservation subpage
+- Finish User homepage, and room reservation subpage frontend
 - Learn to generate Map page based on Google Maps API
 - Start to work on the advanced filter function, and advanced search page
 
@@ -63,7 +63,11 @@
 
 **Yigao**:
 
-- TODO
+- Google Map API requires API key, which is not setted up yet
+- Currently we don't have user database to store their course list, and reservation lists, and thus
+we need to revise the front end to integrate with data.
+- Button function, such as add course, remove course, cancel reservation is not implemented
+
 
 **Chuteng**:
 
@@ -86,7 +90,8 @@
 
 **Yigao**:
 
-- TODO
+- Connect to Google Map API, exhibiting the map on the page.
+- Make the buildings on the Map clickable, and exhibiting the correct building content.
 
 **Chuteng**:
 
