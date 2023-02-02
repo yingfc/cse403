@@ -21,11 +21,10 @@
 ### Progress and issues
 
 - Re-do layout section of top-level README
-- TODO
 
 ### Plan for Next Week
 
-- TODO
+- Start developing the front end and backend of the project and have regular team meetings to track progress
 
 ---
 
@@ -80,7 +79,7 @@ we need to revise the front end to integrate with data.
 
 **Wajdi**:
 
-- TODO
+- Started learning about data scraping for website use
 
 **Yingfan**:
 
@@ -105,7 +104,7 @@ we need to revise the front end to integrate with data.
 
 **Wajdi**:
 
-- TODO
+- Start implementing the backend tables and data scraping for the backend
 
 **Yingfan**:
 
