@@ -75,7 +75,8 @@ we need to revise the front end to integrate with data.
 
 **Fengyi**:
 
-- TODO
+- Working on design an intuitive interface to allow user searching for locations  
+- Contribute to the Architecture writeup
 
 **Wajdi**:
 
@@ -100,7 +101,7 @@ we need to revise the front end to integrate with data.
 
 **Fengyi**:
 
-- TODO
+- Add sorting options to allow users to refine their search results  
 
 **Wajdi**:
 
