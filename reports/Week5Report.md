@@ -71,7 +71,8 @@ we need to revise the front end to integrate with data.
 
 **Chuteng**:
 
-- TODO
+- Successfully started front end server
+- Added test features such as buttons and routes to the UI
 
 **Fengyi**:
 
@@ -95,7 +96,8 @@ we need to revise the front end to integrate with data.
 
 **Chuteng**:
 
-- TODO
+- Figure out a way to integrate the map UI to our current UI
+- Make the major buildings stand out so that users are prompted to click
 
 **Fengyi**:
 
