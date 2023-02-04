@@ -1,23 +1,18 @@
+import db.GlobalDBCred;
+
 import java.sql.*;
  
 public class MySqlDemo {
-
-    static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
-    static final String DB_URL = "jdbc:mysql://34.145.35.221/dubmap_backend?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
- 
-    // Database credential
-    static final String USER = "root";
-    static final String PASS = "";     // ask @yingfc for password
 
     public static void main(String[] args) {
         Connection conn = null;
         Statement stmt = null;
         try{
             // register JDBC driver
-            Class.forName(JDBC_DRIVER);
+            Class.forName(GlobalDBCred.JDBC_DRIVER);
         
             System.out.println("Link to database");
-            conn = DriverManager.getConnection(DB_URL,USER,PASS);
+            conn = DriverManager.getConnection(GlobalDBCred.DB_URL,GlobalDBCred.USER,GlobalDBCred.PASS);
         
             // querying
             System.out.println("===== Querying =====");
