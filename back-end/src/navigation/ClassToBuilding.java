@@ -6,7 +6,7 @@ import java.sql.*;
 
 public class ClassToBuilding {
 
-    private static final String SQL_QUERY = "SELECT b.building_full_name FROM building as b, class as c WHERE c.major_abbr=? AND c.course_num=? AND c.section=? AND b.building_abbr=c.building_abbr;";
+    public static final String SQL_QUERY = "SELECT b.building_full_name FROM building as b, class as c WHERE c.major_abbr=? AND c.course_num=? AND c.section=? AND b.building_abbr=c.building_abbr;";
 
     public static void main(String[] args) {
         System.out.println(getBuildingFromClass("CSE", 403, "A"));
