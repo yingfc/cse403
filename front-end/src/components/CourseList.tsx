@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './index.css';
 
+interface CourseListProps{
+  UserId: number;
+}
 
 interface Course {
   name: string;
@@ -9,15 +12,21 @@ interface Course {
   room_num: string;
 }
 
-interface CourseList{
+interface CourseList {
   course_list: Course[];
 }
 
-class CourseList {
-  constructor(props: Course[] ) {
+class CourseList extends Component<CourseListProps, {}>{
+  constructor(props: CourseListProps) {
     // props should be user id or user name, search the database to query
     // the course list. Update later once we have database.
-    this.course_list = props;
+    super(props);
+    this.course_list = this.getUser(props.UserId);
+  }
+
+  getUser(user: number) : Course[] {
+    // get the user info from the user database
+    return [];
   }
 
   getCourses() :JSX.Element[] {
@@ -50,7 +59,7 @@ class CourseList {
 
   // TODO: add add course function
   render() {
-    <React.StrictMode>
+    return <React.StrictMode>
       <h3>Course List</h3>
       <div>
         {this.getCourses()}
