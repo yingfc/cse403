@@ -14,7 +14,7 @@ out/
 /front-end/build
 
 # misc
-/front-end/.env
+front-end/.env
 /front-end/.DS_Store
 /front-end/.env.local
 /front-end/.env.development.local
