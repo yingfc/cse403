@@ -18,7 +18,6 @@ public interface GlobalDBCred {
             Scanner scan = new Scanner(f);
             if (scan.hasNext()) {
                 String res = scan.next();
-                System.out.println("KEY: " + res);
                 return res;
             }
         } catch (FileNotFoundException e) {
