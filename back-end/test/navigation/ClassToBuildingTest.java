@@ -16,17 +16,15 @@ public class ClassToBuildingTest {
     private static ResultSet results = null;
     @BeforeClass
     public static void beforeClass() {
-        // Properties for creating connection to database
-        Properties props = new Properties();
-        props.setProperty("user", "root");
-        props.setProperty("password", GlobalDBCred.PASS);
-
         try {
             // STEP 1: Register JDBC driver
             Class.forName(GlobalDBCred.JDBC_DRIVER).getDeclaredConstructor().newInstance();
 
             // STEP 2: Get connection to DB
             System.out.println("Connecting to a selected database...");
+            System.out.println("URL: " + GlobalDBCred.DB_URL);
+            System.out.println("USER: " + GlobalDBCred.USER);
+            System.out.println("PASS: " + GlobalDBCred.PASS);
             conn = DriverManager.getConnection(GlobalDBCred.DB_URL, GlobalDBCred.USER, GlobalDBCred.PASS);
             // conn = DriverManager.getConnection(DB_URL, props);
             System.out.println("Connected database successfully...");
