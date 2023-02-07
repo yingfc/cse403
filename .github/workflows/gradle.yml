@@ -42,13 +42,13 @@ jobs:
       run: | 
         echo "The GitHub Action Secret will be masked:"
         echo ${{ secrets.GCP_DB_KEY }}
-        echo DB_KEY=\"$DB_KEY\" > ./local.properties
-        ./gradlew build --info
+        mkdir -p back-end/
+        echo DB_KEY="$DB_KEY" > back-end/local.properties
 
 #    - name: Build with Gradle
 #      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
 #      with:
 #        arguments: build
 
-#    - name: Run build with Gradle Wrapper
-#      run: ./gradlew build --info
+    - name: Run build with Gradle Wrapper
+      run: ./gradlew build --info
