@@ -8,14 +8,6 @@ interface BuildingGeneratorProps{
 interface Building {
   abbr: string;
   full: string;
-  location: any; // should be point on the map
-  rooms: Room[]; // contain room numbers
-}
-
-interface Room {
-  id: string; // room number
-  type: string;
-  capacity: string; // maximum people included
 }
 
 interface BuildingGenerator {
@@ -39,22 +31,8 @@ class BuildingGenerator extends Component<BuildingGeneratorProps, {}> {
   parseBuilding (props: Building): JSX.Element {
     let building = <div>
       <p>{props.full}</p>
-      <>{this.parseRoom(props.rooms)}</>
     </div>
     return building;
-  }
-
-  parseRoom (props: Room[]): JSX.Element[] {
-    let rooms : JSX.Element[] = [];
-    for (let i = 0; i < props.length; i++) {
-      let room = <div>
-        <p>{props[i].id}</p>
-        <p>{"Capacity: " + props[i].capacity +"; Type: " + props[i].type}</p>
-        <button  data-attribute={(props[i].type === "reserve") ? 'hidden' : ''}>Reserve</button>
-      </div>;
-      rooms.push(room);
-    }
-    return rooms;
   }
 
   render() {
