@@ -19,7 +19,7 @@ public class ClassToBuildingTest {
         // Properties for creating connection to database
         Properties props = new Properties();
         props.setProperty("user", "root");
-        props.setProperty("password", "");
+        props.setProperty("password", GlobalDBCred.PASS);
 
         try {
             // STEP 1: Register JDBC driver
