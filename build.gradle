@@ -32,4 +32,8 @@ sourceSets {
 dependencies {
     testImplementation 'junit:junit:4.13.1'
     testImplementation 'junit:junit:4.13.1'
+
+    // this is for mysql java connector
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
+    implementation "mysql:mysql-connector-java:8.0.15"
 }
