@@ -23,7 +23,7 @@ public class ClassToBuildingTest {
 
         try {
             // STEP 1: Register JDBC driver
-            Class.forName(GlobalDBCred.JDBC_DRIVER).newInstance();
+            Class.forName(GlobalDBCred.JDBC_DRIVER).getDeclaredConstructor().newInstance();
 
             // STEP 2: Get connection to DB
             System.out.println("Connecting to a selected database...");
