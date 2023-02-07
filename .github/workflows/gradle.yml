@@ -33,6 +33,9 @@ jobs:
     - name: Run chmod to make gradlew executable
       run: chmod +x ./gradlew
 
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v2
+
     - name: Load GitHub Actions Secrets
       env:
         DB_KEY: ${{ secrets.GCP_DB_KEY }}
@@ -40,13 +43,12 @@ jobs:
         echo "The GitHub Action Secret will be masked:"
         echo ${{ secrets.GCP_DB_KEY }}
         echo DB_KEY=\"$DB_KEY\" > ./local.properties
+        ./gradlew build --info
 
 #    - name: Build with Gradle
 #      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
 #      with:
 #        arguments: build
 
-    - name: Setup Gradle
-      uses: gradle/gradle-build-action@v2
-    - name: Run build with Gradle Wrapper
-      run: ./gradlew build --info
+#    - name: Run build with Gradle Wrapper
+#      run: ./gradlew build --info
