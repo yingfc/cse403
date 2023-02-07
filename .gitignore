@@ -24,3 +24,8 @@ front-end/.env
 /front-end/npm-debug.log*
 /front-end/yarn-debug.log*
 /front-end/yarn-error.log*
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
