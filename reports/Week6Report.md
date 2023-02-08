@@ -63,7 +63,9 @@
 
 **Yigao**:
 
-- TODO
+- Finish the building subpage, but require to integrate with data
+- Need individual building reservation link in Building file
+- Begin Search bar implementation.
 
 **Chuteng**:
 
@@ -88,7 +90,9 @@
 
 **Yigao**:
 
-- TODO
+- Connecting the Building subpage to the building database
+- Make the Map building clickable and exhibiting the correct building content
+- Finish search bar implementation
 
 **Chuteng**:
 
