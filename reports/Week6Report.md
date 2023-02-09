@@ -69,7 +69,8 @@
 
 **Chuteng**:
 
-- TODO
+- Adding map markers on the map for the buildings
+- Styling the page
 
 **Fengyi**:
 
@@ -96,7 +97,7 @@
 
 **Chuteng**:
 
-- TODO
+- Investigate the route visualization API
 
 **Fengyi**:
 
