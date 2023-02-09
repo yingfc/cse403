@@ -78,7 +78,9 @@
 
 **Wajdi**:
 
-- TODO
+- setup Gradle and the CI on the repo
+- dedicated a folder src/java/tests to be able to integrate and add unit tests
+- 
 
 **Yingfan**:
 
@@ -105,7 +107,8 @@
 
 **Wajdi**:
 
-- TODO
+- Started working on the queries for the extracted tables, should be done by next week
+- Getting ready for beta release.
 
 **Yingfan**:
 
