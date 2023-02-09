@@ -74,7 +74,7 @@
 
 **Fengyi**:
 
-- TODO
+- Creating dining open hour and menu table
 
 **Wajdi**:
 
@@ -103,7 +103,7 @@
 
 **Fengyi**:
 
-- TODO
+- Implement dining search result list
 
 **Wajdi**:
 
