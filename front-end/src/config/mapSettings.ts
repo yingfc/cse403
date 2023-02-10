@@ -12,5 +12,3 @@ export const options = {
   disableDefaultUI: true,
   zoomControl: true,
 };
-
-export const geo;
