@@ -1,5 +1,8 @@
 .vscode
 out/
+
+/back-end/local.properties
+
 /front-end/package-lock.json
 
 # dependencies
