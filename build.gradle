@@ -31,9 +31,16 @@ sourceSets {
 
 dependencies {
     testImplementation 'junit:junit:4.13.1'
-    testImplementation 'junit:junit:4.13.1'
 
     // this is for mysql java connector
-    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
     implementation "mysql:mysql-connector-java:8.0.15"
+
+    // sparkJava
+    implementation "com.sparkjava:spark-core:2.9.4"
+
+    // slf4j for sparkJava
+    implementation "org.slf4j:slf4j-api:1.7.10"
+    implementation "org.slf4j:slf4j-simple:2.0.5"
+
+    implementation "com.google.code.gson:gson:2.8.9"
 }
