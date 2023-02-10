@@ -1,6 +1,7 @@
 .vscode
 out/
 
+/bin
 /back-end/local.properties
 
 /front-end/package-lock.json
