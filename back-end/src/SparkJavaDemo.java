@@ -22,5 +22,12 @@ public class SparkJavaDemo {
                     new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(buildingService.getBuilding(req.params(":abbr"))))
             );
         });
+
+        get("/class", (req, res) -> {
+            res.type("application/json");
+            return new Gson().toJson(
+                    new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(buildingService.getBuildingFromClass(req.queryMap())))
+            );
+        });
     }
 }
