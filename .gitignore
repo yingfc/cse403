@@ -29,3 +29,10 @@ front-end/.env
 
 # Ignore Gradle build output directory
 build
+
+bin/
+/back-end/.DS_Store
+.DS_Store
+.metals/
+/back-end/local.properties
+.idea/
