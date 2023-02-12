@@ -1,4 +1,5 @@
 import GoogleMapComponent from "./GoogleMap";
+import BuildingGenerator from "./BuildingGenerator";
 
 function Components(){
   const uwLink: string = process.env.REACT_APP_UW_LIBRARY_RESERVATION_LINK as string;
@@ -9,6 +10,7 @@ function Components(){
         <button>to reserve</button>
       </a>
       <GoogleMapComponent />
+      <BuildingGenerator />
     </div>
   )
 }
