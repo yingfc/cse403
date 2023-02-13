@@ -80,7 +80,7 @@
 
 - setup Gradle and the CI on the repo
 - dedicated a folder src/java/tests to be able to integrate and add unit tests
-- 
+-
 
 **Yingfan**:
 
