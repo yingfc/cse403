@@ -29,7 +29,7 @@ const GoogleMapComponent: React.FC = () => {
     // Array conversion is needed as buildings is Collection object instead of Array and forEach only works for Array
     const buildingArr = Array.from(buildings);
     buildingArr.forEach((building) => {
-      addSingleMarker(new google.maps.LatLng(building.latitude, building.longitude));
+      addSingleMarker(new google.maps.LatLng(building.latitude, building.longitude), building.buildingAbbr);
     });
   }, [buildings])
 
@@ -45,11 +45,27 @@ const GoogleMapComponent: React.FC = () => {
     mapRef.current = map;
   }
 
-  const addSingleMarker = (location: google.maps.LatLng): void => {
+  const addSingleMarker = (location: google.maps.LatLng, abbr: string): void => {
     const marker = new google.maps.Marker({
       position: location,
       map: mapRef.current,
-    });
+    })
+    marker.addListener("click", () =>{exhibitDetail(abbr)});
+  }
+
+  function exhibitDetail(abbr: string) {
+    try {
+      let details = document.getElementsByClassName("showed") as HTMLCollectionOf<HTMLElement>;
+      for (var i = 0; i < details.length; i++) {
+        details[i].style.visibility = "hidden";
+        details[i].classList.remove("showed");
+      }
+      let selected = document.getElementById(abbr)!
+      selected.style.visibility = "visible";
+      selected.classList.add("showed");
+    } catch {
+      console.error("Failed to exhibit detail")
+    }
   }
 
   const onUnMount = (): void => {
@@ -76,7 +92,9 @@ const GoogleMapComponent: React.FC = () => {
 
 async function getBuildingInfo() {
   try {
-    return (await axios.get(process.env.REACT_APP_DUBMAP_SERVER + "buildings")).data as BuildingInfo[];
+    const response = await axios.get("http://localhost:4567/buildings");
+    console.log(response);
+    return (response).data as BuildingInfo[];
   } catch {
     alert("Unable to fetch buildings info");
     return [];
