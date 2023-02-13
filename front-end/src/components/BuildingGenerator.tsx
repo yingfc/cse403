@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import * as fs from 'fs';
-import { parse } from 'csv-parse';
-import './index.css';
-
+import axios from "axios";
 
 interface Building {
   abbr: string;
@@ -15,44 +12,20 @@ interface BuildingGenerator {
   buildings : Building[];
 }
 
-
-const csvFilePath ='back-end\\src\\db\\building.csv';
-
 const reservable: Map<string, string> = new Map<string, string>([["ALB", "https://cal.lib.uw.edu/spaces?lid=1449&gid=0"],
 ["ELB", "https://cal.lib.uw.edu/reserve/engineering-group-study"],
 ["HSA", "https://cal.lib.uw.edu/reserve/hsl-group-study"],
-["ODE", "https://cal.lib.uw.edu/spaces?lid=1454&gid=0"],
+["OUG", "https://cal.lib.uw.edu/spaces?lid=1454&gid=0"],
 ["PCAR","https://cal.lib.uw.edu/reserve/foster-group-study"],
 ["SUZ","https://cal.lib.uw.edu/spaces?lid=1449&gid=0"]]);
 
 class BuildingGenerator extends Component {
   constructor (props: any) { //props should be string, query building info from db
     super(props);
-    this.buildings = this.fetchBuildings();
-  }
-
-  fetchBuildings (): Building[] {
-    fs.readFileSync('back-end\\src\\db\\building.csv','utf8');
-    const headers = ['abbr', 'full', 'lat', 'lon'];
-    const fileContent = fs.readFileSync(csvFilePath, { encoding: 'utf-8' });
-    parse(fileContent, {
-      delimiter: ',',
-      columns: headers,
-      fromLine: 2,
-      cast: (columnValue, context) => {
-        if (context.column === 'geoNameId') {
-          return parseInt(columnValue, 10);
-        }
-        return columnValue;
-      }
-    }, (error, result: Building[]) => {
-      if (error) {
-        console.error(error);
-      }
-      return result;
-    });
-    console.error("Failed to read building data");
-    return [];
+    const fetch_promise = Promise.resolve(this.getBuildingInfo());
+    fetch_promise.then((p) => {
+      this.buildings = p;
+    })
   }
 
   parseBuildings (): JSX.Element[] {
@@ -90,6 +63,14 @@ class BuildingGenerator extends Component {
     return block;
   }
 
+  async getBuildingInfo(): Promise<Building[]> {
+    try {
+      return (await axios.get(process.env.REACT_APP_DUBMAP_SERVER + "buildings")).data as Building[];
+    } catch {
+      alert("Unable to fetch buildings info");
+      return [];
+    }
+  }
 
   render() {
     return <React.StrictMode>
