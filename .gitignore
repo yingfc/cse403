@@ -1,10 +1,8 @@
-.vscode
 out/
 
-/bin
+bin
 /back-end/local.properties
-
-/front-end/package-lock.json
+/back-end/.idea
 
 # dependencies
 /front-end/node_modules
@@ -30,6 +28,9 @@ front-end/.env
 /front-end/yarn-error.log*
 # Ignore Gradle project-specific cache directory
 .gradle
+.vscode
+.github
+.idea
 
 # Ignore Gradle build output directory
 build
