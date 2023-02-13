@@ -53,7 +53,14 @@ const GoogleMapComponent: React.FC = () => {
 
   function exhibitDetail(abbr: string) {
     try {
-      document.getElementById(abbr)!.style.visibility = "visible";
+      let details = document.getElementsByClassName("showed") as HTMLCollectionOf<HTMLElement>;
+      for (var i = 0; i < details.length; i++) {
+        details[i].style.visibility = "hidden";
+        details[i].classList.remove("showed");
+      }
+      let selected = document.getElementById(abbr)!
+      selected.style.visibility = "visible";
+      selected.classList.add("showed");
     } catch {
       console.error("Failed to exhibit detail")
     }
