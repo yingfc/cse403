@@ -20,12 +20,13 @@ export function calculateAndDisplayRouteDemo(
 export function calculateAndDisplayRoute(
     directionsService: google.maps.DirectionsService,
     directionsRenderer: google.maps.DirectionsRenderer,
-    srcLocation: BuildingInfo,
+    srcLat: number,
+    srcLong: number,
     dstLocation: BuildingInfo,
 ) {
     directionsService
         .route({
-            origin: { lat: srcLocation.latitude, lng: srcLocation.longitude},
+            origin: { lat: srcLat, lng: srcLong},
             destination: { lat: dstLocation.latitude, lng: dstLocation.longitude},
             travelMode: google.maps.TravelMode.WALKING,
         })
