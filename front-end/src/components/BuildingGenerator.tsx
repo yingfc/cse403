@@ -39,21 +39,15 @@ class BuildingGenerator extends Component<BuildingProps> {
       <div>
         {this.parseBuilding(props)}
       </div>
-      <div ref={ ref => this.navigateButton(props)}></div>;
+      <button className='navigate' onClick={() => this.navigate(props.buildingAbbr)}>Go To</button>
     </div>
     return block;
   }
 
-  navigateButton (props: BuildingInfo): HTMLButtonElement {
-    let btn:HTMLButtonElement= document.createElement("button");
-    btn.innerText = "Go To";
-    btn.classList.add("navigate");
-    btn.onclick = () => {this.navigate(props.buildingAbbr)};
-    return btn;
-  }
-
   // show the route from user current location to selected building.
-  navigate(abbr: string):void {}
+  navigate(abbr: string):void {
+    console.log("navigate")
+  }
 
   render() {
     return <React.StrictMode>
