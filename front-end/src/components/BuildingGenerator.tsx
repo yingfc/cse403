@@ -58,14 +58,16 @@ class BuildingGenerator extends Component {
       <div>
         {this.parseBuilding(props)}
       </div>
-      <button>Go To</button>
+      <button className='navigate'>Go To</button>
     </div>
     return block;
   }
 
-  async getBuildingInfo(): Promise<Building[]> {
+  async getBuildingInfo() {
     try {
-      return (await axios.get(process.env.REACT_APP_DUBMAP_SERVER + "buildings")).data as Building[];
+      const response = await axios.get("http://localhost:4567/buildings");
+      console.log(response);
+      return (response).data as Building[];
     } catch {
       alert("Unable to fetch buildings info");
       return [];
