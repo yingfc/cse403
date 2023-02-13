@@ -19,13 +19,14 @@ export function Components(){
 
 
   useEffect(() => {
+    console.log("rendering components")
     const getBuildings = async () => {
       let buildingInfo = await getBuildingInfo();
       setBuildings(buildingInfo);
       console.log(buildings);
     }
     getBuildings();
-  }, [buildings]);
+  }, []);
 
   console.log(buildings);
 
