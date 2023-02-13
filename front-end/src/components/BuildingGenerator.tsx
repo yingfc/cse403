@@ -8,8 +8,22 @@ interface Building {
   lon: number;
 }
 
-interface BuildingGenerator {
-  buildings : Building[];
+var buildings: Building[] = [];
+
+const fetch_promise = Promise.resolve(getBuildingInfo());
+fetch_promise.then((p) => {
+  buildings = p;
+});
+
+async function getBuildingInfo() {
+  try {
+    const response = await axios.get("http://localhost:4567/buildings");
+    console.log(response);
+    return (response).data as Building[];
+  } catch {
+    alert("Unable to fetch buildings info");
+    return [];
+  }
 }
 
 const reservable: Map<string, string> = new Map<string, string>([["ALB", "https://cal.lib.uw.edu/spaces?lid=1449&gid=0"],
@@ -20,18 +34,11 @@ const reservable: Map<string, string> = new Map<string, string>([["ALB", "https:
 ["SUZ","https://cal.lib.uw.edu/spaces?lid=1449&gid=0"]]);
 
 class BuildingGenerator extends Component {
-  constructor (props: any) { //props should be string, query building info from db
-    super(props);
-    const fetch_promise = Promise.resolve(this.getBuildingInfo());
-    fetch_promise.then((p) => {
-      this.buildings = p;
-    })
-  }
 
-  parseBuildings (): JSX.Element[] {
+  parseBuildings (b: Building[]): JSX.Element[] {
     let env : JSX.Element[] = [];
-    for (let i = 0; i < this.buildings.length; i++) {
-      let building = this.buildings[i];
+    for (let i = 0; i < b.length; i++) {
+      let building = b[i];
       env.push(this.compact(building));
     }
     return env;
@@ -63,21 +70,10 @@ class BuildingGenerator extends Component {
     return block;
   }
 
-  async getBuildingInfo() {
-    try {
-      const response = await axios.get("http://localhost:4567/buildings");
-      console.log(response);
-      return (response).data as Building[];
-    } catch {
-      alert("Unable to fetch buildings info");
-      return [];
-    }
-  }
-
   render() {
     return <React.StrictMode>
     <div id="building_space">
-      {this.parseBuildings()}
+      {this.parseBuildings(buildings)}
     </div>
   </React.StrictMode>
   }
