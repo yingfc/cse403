@@ -11,12 +11,16 @@ public class SparkJavaDemo {
 
         get("/hello", (req, res) -> "hi there, this is SparkJava backend service for DubMap.");
         get("/buildings", (req, res) -> {
+            res.header("Access-Control-Allow-Origin", "*");
+            res.header("Access-Control-Allow-Headers", "*");
             res.type("application/json");
             return new Gson().toJson(
                 new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(buildingService.getAllBuildings()))
             );
         });
         get("/building/:abbr", (req, res) -> {
+            res.header("Access-Control-Allow-Origin", "*");
+            res.header("Access-Control-Allow-Headers", "*");
             res.type("application/json");
             return new Gson().toJson(
                     new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(buildingService.getBuilding(req.params(":abbr"))))
@@ -24,6 +28,8 @@ public class SparkJavaDemo {
         });
 
         get("/class", (req, res) -> {
+            res.header("Access-Control-Allow-Origin", "*");
+            res.header("Access-Control-Allow-Headers", "*");
             res.type("application/json");
             return new Gson().toJson(
                     new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(buildingService.getBuildingFromClass(req.queryMap())))
