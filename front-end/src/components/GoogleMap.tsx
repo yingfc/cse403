@@ -26,7 +26,9 @@ const GoogleMapComponent: React.FC = () => {
   });
 
   useEffect(() => {
-    buildings.forEach((building) => {
+    // Array conversion is needed as buildings is Collection object instead of Array and forEach only works for Array
+    const buildingArr = Array.from(buildings);
+    buildingArr.forEach((building) => {
       addSingleMarker(new google.maps.LatLng(building.latitude, building.longitude));
     });
   }, [buildings])
