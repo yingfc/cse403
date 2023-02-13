@@ -4,7 +4,7 @@ import { center, containerStyle, options } from "../config/mapSettings";
 import { BuildingInfo } from ".";
 
 
-interface BuildingProps {
+export interface BuildingProps {
   buildings: BuildingInfo[];
 }
 
@@ -12,7 +12,6 @@ const GoogleMapComponent: React.FC<BuildingProps> = ({buildings}) => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const addSingleMarker = (location: google.maps.LatLng, abbr: string): void => {
-    console.log("adding marker");
     const marker = new google.maps.Marker({
       position: location,
       map: mapRef.current,
@@ -29,18 +28,19 @@ const GoogleMapComponent: React.FC<BuildingProps> = ({buildings}) => {
   }
 
   function exhibitDetail(abbr: string) {
+    console.log("clicked");
     try {
       let details = document.getElementsByClassName("showed") as HTMLCollectionOf<HTMLElement>;
+      console.log(details);
       for (var i = 0; i < details.length; i++) {
-        details[i].style.visibility = "hidden";
+        details[i].style.display = "none";
         details[i].classList.remove("showed");
       }
-      let selected = document.getElementById(abbr)!
-      selected.style.visibility = "visible";
-      selected.classList.add("showed");
-    } catch {
-      console.error("Failed to exhibit detail")
-    }
+    } catch {}
+    let selected = document.getElementById(abbr)!;
+    console.log(selected);
+    selected.style.display = "block";
+    selected.classList.add("showed");
   }
 
   const onUnMount = (): void => {

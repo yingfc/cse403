@@ -43,7 +43,7 @@ export function Components(){
         <button>to reserve</button>
       </a>
       <GoogleMapComponent buildings={buildings}/>
-      {/* <BuildingGenerator /> */}
+      <BuildingGenerator buildings={buildings}/>
     </div>
   )
 }
