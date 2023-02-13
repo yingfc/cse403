@@ -34,7 +34,7 @@ class BuildingGenerator extends Component<BuildingProps> {
   }
 
   compact (props: BuildingInfo): JSX.Element {
-    let block = <div id={props.buildingAbbr} className='detail' style={{display: "block"}}>
+    let block = <div id={props.buildingAbbr} className='detail' style={{display: "none"}}>
       <h3>{props.buildingAbbr + " : " + props.buildingFullName}</h3>
       <div>
         {this.parseBuilding(props)}
