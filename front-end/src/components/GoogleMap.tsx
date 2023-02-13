@@ -15,6 +15,7 @@ const GoogleMapComponent: React.FC<BuildingProps> = ({buildings}) => {
     const marker = new google.maps.Marker({
       position: location,
       map: mapRef.current,
+      label: abbr
     })
     marker.addListener("click", () =>{exhibitDetail(abbr)});
   }
