@@ -42,6 +42,9 @@ export function Components(){
       <a href={uwLink}>
         <button>to reserve</button>
       </a>
+        <a>
+            <button id='route' value="Get Route" >Get Route</button>
+        </a>
       <GoogleMapComponent buildings={buildings}/>
       <BuildingGenerator buildings={buildings}/>
     </div>

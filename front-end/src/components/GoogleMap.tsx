@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import {GoogleMap, useJsApiLoader} from '@react-google-maps/api'
 import { center, containerStyle, options } from "../config/mapSettings";
 import { BuildingInfo } from ".";
+import { calculateAndDisplayRouteDemo } from "./Route";
 
 
 export interface BuildingProps {
@@ -19,11 +20,16 @@ const GoogleMapComponent: React.FC<BuildingProps> = ({buildings}) => {
     marker.addListener("click", () =>{exhibitDetail(abbr)});
   }
 
-
   // save map in ref
   const mapRef = React.useRef<google.maps.Map | null>(null);
 
   const onLoad = (map: google.maps.Map): void =>{
+    const directionsRenderer = new google.maps.DirectionsRenderer();
+    const directionsService = new google.maps.DirectionsService();
+    directionsRenderer.setMap(map);
+    // @ts-ignore
+    document.getElementById("route").addEventListener('click', (e: Event) => calculateAndDisplayRouteDemo(directionsService, directionsRenderer));
+    // calculateAndDisplayRoute(directionsService, directionsRenderer);
     mapRef.current = map;
   }
 
