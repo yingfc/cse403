@@ -34,5 +34,22 @@ export function calculateAndDisplayRoute(
             console.log(response);
             directionsRenderer.setDirections(response);
         })
-        .catch((e) => window.alert("Directions request failed."));
+        .catch((e) => window.alert("Directions request failed." + e));
+}
+
+export class GeoService {
+    public pos: any
+    public currLat: number | undefined
+    public currLong: number | undefined
+    public getPosition = () => {
+        navigator.geolocation.getCurrentPosition((position) => {
+            console.log('Your current position is:');
+            console.log(`Latitude : ${position.coords.latitude}`);
+            console.log(`Longitude: ${position.coords.longitude}`);
+            console.log(`More or less ${position.coords.accuracy} meters.`);
+            this.pos = position;
+            this.currLat = position.coords.latitude;
+            this.currLong = position.coords.longitude;
+        })
+    }
 }

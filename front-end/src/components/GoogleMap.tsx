@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {GoogleMap, useJsApiLoader} from '@react-google-maps/api'
 import { center, containerStyle, options } from "../config/mapSettings";
 import { BuildingInfo } from ".";
-import { calculateAndDisplayRouteDemo } from "./Route";
+import {calculateAndDisplayRoute, calculateAndDisplayRouteDemo, GeoService} from "./Route";
 
 
 export interface BuildingProps {
@@ -24,12 +24,18 @@ const GoogleMapComponent: React.FC<BuildingProps> = ({buildings}) => {
   const mapRef = React.useRef<google.maps.Map | null>(null);
 
   const onLoad = (map: google.maps.Map): void =>{
+    // get current location (lat/long)
+    let geo = new GeoService();
+    // @ts-ignore
+    document.getElementById("currLoc").addEventListener('click', () => { geo.getPosition(); });
+
+    // set up Direction Service
     const directionsRenderer = new google.maps.DirectionsRenderer();
     const directionsService = new google.maps.DirectionsService();
     directionsRenderer.setMap(map);
     // @ts-ignore
     document.getElementById("route").addEventListener('click', (e: Event) => calculateAndDisplayRouteDemo(directionsService, directionsRenderer));
-    // calculateAndDisplayRoute(directionsService, directionsRenderer);
+    // document.getElementById("route").addEventListener('click', (e: Event) => calculateAndDisplayRoute(directionsService, directionsRenderer, geo.currLat, geo.currLong, buildingInfo));
     mapRef.current = map;
   }
 

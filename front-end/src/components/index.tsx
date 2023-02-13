@@ -45,6 +45,9 @@ export function Components(){
         <a>
             <button id='route' value="Get Route" >Get Route</button>
         </a>
+      <a>
+        <button id='currLoc' value="Get Current Location ">Get Current Location</button>
+      </a>
       <GoogleMapComponent buildings={buildings}/>
       <BuildingGenerator buildings={buildings}/>
     </div>
