@@ -1,13 +1,11 @@
-out/
 
-bin
-/back-end/local.properties
-/back-end/.idea
+back-end/local.properties
+back-end/.idea
 
 # dependencies
-/front-end/node_modules
-/front-end/.pnp
-/front-end/.pnp.js
+front-end/node_modules
+front-end/.pnp
+front-end/.pnp.js
 
 # testing
 /front-end/coverage
@@ -34,8 +32,8 @@ front-end/.env
 
 # Ignore Gradle build output directory
 build
+bin
 
-bin/
 /back-end/.DS_Store
 .DS_Store
 .metals/
