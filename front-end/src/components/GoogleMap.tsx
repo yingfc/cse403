@@ -27,7 +27,7 @@ const GoogleMapComponent: React.FC = () => {
 
   useEffect(() => {
     buildings.forEach((building) => {
-      addSingleMarker(new google.maps.LatLng(building.latitude, building.longitude));
+      addSingleMarker(new google.maps.LatLng(building.latitude, building.longitude), building.buildingAbbr);
     });
   }, [buildings])
 
@@ -43,11 +43,20 @@ const GoogleMapComponent: React.FC = () => {
     mapRef.current = map;
   }
 
-  const addSingleMarker = (location: google.maps.LatLng): void => {
+  const addSingleMarker = (location: google.maps.LatLng, abbr: string): void => {
     const marker = new google.maps.Marker({
       position: location,
       map: mapRef.current,
-    });
+    })
+    marker.addListener("click", () =>{exhibitDetail(abbr)});
+  }
+
+  function exhibitDetail(abbr: string) {
+    try {
+      document.getElementById(abbr)!.style.visibility = "visible";
+    } catch {
+      console.error("Failed to exhibit detail")
+    }
   }
 
   const onUnMount = (): void => {

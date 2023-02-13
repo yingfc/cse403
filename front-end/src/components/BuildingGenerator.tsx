@@ -53,7 +53,7 @@ class BuildingGenerator extends Component {
   }
 
   compact (props: Building): JSX.Element {
-    let block = <div id={props.abbr} hidden>
+    let block = <div id={props.abbr} hidden className='detail'>
       <h3>{props.full}</h3>
       <div>
         {this.parseBuilding(props)}
