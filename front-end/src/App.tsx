@@ -1,5 +1,5 @@
 import './App.css';
-import Components from './components';
+import {Components} from './components';
 
 function App() {
   console.log(process.env.REACT_APP_UW_LIBRARY_RESERVATION_LINK);
