@@ -17,7 +17,7 @@ const SearchBar: React.FC = () =>{
   return (
   <div id="searchBar">
     <input id="input" type="text" placeholder='CSE 403 A'/>
-    <button id="search">Submit</button>
+    <button id="search" type="button" >Go!</button>
   </div>
   )
 };
