@@ -2,8 +2,7 @@ import React from "react";
 import {GoogleMap, useJsApiLoader} from '@react-google-maps/api'
 import { center, containerStyle, options } from "../config/mapSettings";
 import { BuildingInfo } from ".";
-import {calculateAndDisplayRoute, calculateAndDisplayRouteDemo, GeoService} from "./Route";
-import {ClassInfo, getBuildingInfoFromClass} from "./SearchBar";
+import {GeoService} from "./Route";
 import { reservable } from "./BuildingGenerator";
 
 
@@ -63,26 +62,6 @@ const GoogleMapComponent: React.FC<BuildingProps> = ({buildings}) => {
     directionsRenderer.setMap(map);
     // // @ts-ignore
     // document.getElementById("route").addEventListener('click', (e: Event) => calculateAndDisplayRouteDemo(directionsService, directionsRenderer));
-
-    const input = document.getElementById('input') as HTMLInputElement;
-    const button = document.getElementById("search");
-    let buildingInfo: BuildingInfo | null;
-    const parseInput = async (input: string) => {
-      let numId = input.search(/\d/);
-      let major = input.substring(0, numId-1).trim();
-      let courseNum = parseInt(input.substring(numId, numId+3));
-      let section = input.substring(numId+4).trim();
-      console.log(major + " " + courseNum + " " + section);
-      buildingInfo = await getBuildingInfoFromClass(new ClassInfo(major, courseNum, section));
-    }
-
-    try{
-      button?.addEventListener('click', (e: Event) => {
-        parseInput(input!.value).then(x => console.log("eric: ", buildingInfo)).then(x => calculateAndDisplayRoute(directionsService, directionsRenderer, geo.currLat!, geo.currLong!, buildingInfo!))
-      });
-    } catch (e) {
-      console.error("Input Error with access to null element: " + e);
-    }
 
     mapRef.current = map;
   }

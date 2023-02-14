@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { BuildingInfo } from '.';
 import React from 'react';
+import {calculateAndDisplayRoute} from "./Route";
+import {directionsRenderer, directionsService, geo} from "./GoogleMap";
 
 export class ClassInfo {
   major: string;
@@ -14,6 +16,27 @@ export class ClassInfo {
 }
 
 const SearchBar: React.FC = () =>{
+
+  const input = document.getElementById('input') as HTMLInputElement;
+  const button = document.getElementById("search");
+  let buildingInfo: BuildingInfo | null;
+  const parseInput = async (input: string) => {
+    let numId = input.search(/\d/);
+    let major = input.substring(0, numId-1).trim();
+    let courseNum = parseInt(input.substring(numId, numId+3));
+    let section = input.substring(numId+4).trim();
+    console.log(major + " " + courseNum + " " + section);
+    buildingInfo = await getBuildingInfoFromClass(new ClassInfo(major, courseNum, section));
+  }
+
+  try{
+    button?.addEventListener('click', (e: Event) => {
+      parseInput(input!.value).then(x => console.log("eric: ", buildingInfo)).then(x => calculateAndDisplayRoute(directionsService, directionsRenderer, geo.currLat!, geo.currLong!, buildingInfo!))
+    });
+  } catch (e) {
+    console.error("Input Error with access to null element: " + e);
+  }
+
   return (
   <div id="searchBar">
     <input id="input" type="text" placeholder='CSE 403 A'/>
