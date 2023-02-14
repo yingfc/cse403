@@ -50,7 +50,9 @@
   },
   "devDependencies": {
     "@types/papaparse": "^5.3.7",
-    "google-map-react": "^2.2.0"
+    "google-map-react": "^2.2.0",
+    "jest": "^27.5.1",
+    "puppeteer": "^19.7.0"
   },
   "browser": {
     "fs": false,
