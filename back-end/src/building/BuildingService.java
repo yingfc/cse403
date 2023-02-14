@@ -9,5 +9,7 @@ public interface BuildingService {
 
     public BuildingInfo getBuilding(String building_abbr);
 
+    public Collection<DiningInfo> getAllDiningPlaces();
+
     public BuildingInfo getBuildingFromClass(QueryParamsMap paramsMap);
 }

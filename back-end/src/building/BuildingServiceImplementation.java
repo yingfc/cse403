@@ -122,6 +122,7 @@ public class BuildingServiceImplementation implements BuildingService {
             conn = DriverManager.getConnection(GlobalDBCred.DB_URL,GlobalDBCred.USER,GlobalDBCred.PASS);
             pstmt = conn.prepareStatement(SQL_QUERY);
             System.out.println(">>> Querying Class: " + paramsMap.value("major") + " " + paramsMap.value("coursenum") + " " + paramsMap.value("section"));
+
             pstmt.setString(1, paramsMap.value("major"));
             pstmt.setInt(2, Integer.parseInt(paramsMap.value("coursenum")));
             pstmt.setString(3, paramsMap.value("section"));
@@ -151,5 +152,55 @@ public class BuildingServiceImplementation implements BuildingService {
             }
         }
         return res;
+    }
+
+    @Override
+    public Collection<DiningInfo> getAllDiningPlaces() {
+        List<DiningInfo> res = new ArrayList<>();
+
+        Connection conn = null;
+        Statement stmt = null;
+        try{
+             // register JDBC driver
+            Class.forName(GlobalDBCred.JDBC_DRIVER);
+
+            conn = DriverManager.getConnection(GlobalDBCred.DB_URL,GlobalDBCred.USER,GlobalDBCred.PASS);
+        
+            // querying
+            stmt = conn.createStatement();
+            String sql;
+            sql = "SELECT * FROM dining";
+            ResultSet rs = stmt.executeQuery(sql);
+
+            // expand result
+            while(rs.next()){
+                String abbr  = rs.getString("building_abbr");
+                String fullName = rs.getString("buildingFullName");
+                String diningName = rs.getString("diningName");
+                double latitude = rs.getDouble("latitude");
+                double longitude = rs.getDouble("longitude");
+
+                res.add(new DiningInfo(abbr, fullName, diningName, latitude, longitude));
+            }
+            rs.close();
+            stmt.close();
+            conn.close();
+        } catch(SQLException se) {
+            se.printStackTrace();
+        } catch(Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if(stmt!=null) stmt.close();
+            } catch(SQLException se2){
+            }
+            try {
+                if(conn!=null) conn.close();
+            } catch(SQLException se){
+                se.printStackTrace();
+            }
+        }
+        return res;
+        }
     }
 }
