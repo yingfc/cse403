@@ -35,14 +35,5 @@ public class SparkJavaDemo {
                     new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(buildingService.getBuildingFromClass(req.queryMap())))
             );
         });
-
-        get("/dinings", (req, res) -> {
-            res.header("Access-Control-Allow-Origin", "*");
-            res.header("Access-Control-Allow-Headers", "*");
-            res.type("application/json");
-            return new Gson().toJson(
-                new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(buildingService.getAllDiningPlaces()))
-            );
-        });
     }
 }
