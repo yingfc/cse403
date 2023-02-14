@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BuildingInfo } from './index';
-import { BuildingProps } from './GoogleMap';
+import {BuildingProps, directionsRenderer, directionsService, geo} from './GoogleMap';
+import axios from "axios";
+import {calculateAndDisplayRoute} from "./Route";
 
 
 const reservable: Map<string, string> = new Map<string, string>([["ALB", "https://cal.lib.uw.edu/spaces?lid=1449&gid=0"],
@@ -45,8 +47,16 @@ class BuildingGenerator extends Component<BuildingProps> {
   }
 
   // show the route from user current location to selected building.
-  navigate(abbr: string):void {
-    console.log("navigate")
+  async navigate(abbr: string): Promise<void> {
+    let buildingInfo: BuildingInfo | null;
+    buildingInfo = await getBuildingInfoFromBuildingAbbr(abbr);
+    console.log("navigate: " + buildingInfo?.buildingAbbr + " " + buildingInfo?.latitude + ", " + buildingInfo?.longitude);
+
+    try{
+      calculateAndDisplayRoute(directionsService, directionsRenderer, geo.currLat!, geo.currLong!, buildingInfo!);
+    } catch (e) {
+      console.error("Input Error with access to null element: " + e);
+    }
   }
 
   render() {
@@ -57,4 +67,16 @@ class BuildingGenerator extends Component<BuildingProps> {
   </React.StrictMode>
   }
 }
+
+export async function getBuildingInfoFromBuildingAbbr(buildingAbbr: string) {
+  try {
+    const response = await axios.get(process.env.REACT_APP_DUBMAP_SERVER + "building/" + buildingAbbr);
+    console.log(response);
+    return response.data.data as BuildingInfo;
+  } catch (e) {
+    alert("Unable to get building from abbr: " + buildingAbbr + "; " + e);
+    return null;
+  }
+}
+
 export default BuildingGenerator;

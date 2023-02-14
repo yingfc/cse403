@@ -10,6 +10,10 @@ export interface BuildingProps {
   buildings: BuildingInfo[];
 }
 
+export let directionsRenderer: google.maps.DirectionsRenderer;
+export let directionsService: google.maps.DirectionsService;
+export let geo: GeoService;
+
 const GoogleMapComponent: React.FC<BuildingProps> = ({buildings}) => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -26,12 +30,12 @@ const GoogleMapComponent: React.FC<BuildingProps> = ({buildings}) => {
 
   const onLoad = (map: google.maps.Map): void =>{
     // get current location (lat/long) on load
-    let geo = new GeoService();
+    geo = new GeoService();
     geo.getPosition();
 
     // set up Direction Service
-    const directionsRenderer = new google.maps.DirectionsRenderer();
-    const directionsService = new google.maps.DirectionsService();
+    directionsRenderer = new google.maps.DirectionsRenderer();
+    directionsService = new google.maps.DirectionsService();
     directionsRenderer.setMap(map);
     // // @ts-ignore
     // document.getElementById("route").addEventListener('click', (e: Event) => calculateAndDisplayRouteDemo(directionsService, directionsRenderer));
