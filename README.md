@@ -21,15 +21,35 @@ associates class code. For example, the user would be able to search for buildin
 class code, and the user would be able to get a list of classes in the building.
 - Have a centralized platform through which the users can explore their options of room reservation through campus
 
-
-
 ---
 
-### Repository layout
+### How to Run DubMap
+
+#### Backend SparkJava Server
+- git pull
+- load the entire project in IntelliJ
+- set up project SDK in *File > Project Structure > Project*, choose JDK 11 and apply
+- go to *backend/local.properties* and add the password of db there, plz ask @Yingfan (Eric) Chen for the password
+- go to *build.gradle* or gradle sidebar on the right of IDEA UI to reload the project (it will take some time to download all the dependences for the first time)
+- go to *back-end/src/SparkJavaDemo*, run it
+- when you see logs saying **Server - Started**, go to **localhost:4567/hello**, and try out all the endpoints
+
+#### Frontend Server
+- to configure the front end, you’ll have to create a .env file at the root directory of the front-end.
+```
+REACT_APP_UW_LIBRARY_RESERVATION_LINK=https://cal.lib.uw.edu/?_gl=1*1qhpnb6*_ga*MTU2MjcyMzAwNC4xNTc4NTI3Mjk2*_ga_63X2ZQHK8P*MTY3NDgzNzQ1NS4zLjAuMTY3NDgzNzQ1NS4wLjAuMA..
+
+REACT_APP_GOOGLE_API=<YOUR GOOGLE API KEY>
+
+REACT_APP_DUBMAP_SERVER=http://localhost:4567/
+```
+- to launch our frontend, please navigate to the root directory of the front-end and run `npm i` and then `npm run start`.
+---
 
 ### Tool sets
-This frontend of this project will be implemented with React.js and the backend will use Node.js with typescript.
+This frontend of this project will be implemented with React and TypeScript and the backend will use SparkJava with Java. The database is hosted on Google Cloud Platform.
 
+### Repository layout
 ```
 📦 cse403
  ┃

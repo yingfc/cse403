@@ -1,6 +1,29 @@
 import axios from 'axios';
 import { BuildingInfo } from '.';
 import React from 'react';
+<<<<<<< HEAD
+=======
+import ReactDOM from 'react-dom/client';
+import axios from "axios";
+import {BuildingInfo} from "./index";
+
+export interface ClassInfo {
+  major: string;
+  courseNum: number;
+  section: string;
+}
+
+export async function getBuildingInfoFromClass(cls: ClassInfo) {
+  try {
+    const response = await axios.get(process.env.REACT_APP_DUBMAP_SERVER + "class?major" + cls.major + "&coursenum=" + cls.courseNum + "&section=" + cls.section);
+    return response.data.data as BuildingInfo;
+  } catch {
+    alert("Unable to get specific building from course: " + cls.major + cls.courseNum + cls.section);
+    return null;
+  }
+
+}
+>>>>>>> 041dc478de66a35b342cb44c72c6711e49ffb833
 
 const SearchBar: React.FC = () =>{
   const parseInput = async (input: string) => {
