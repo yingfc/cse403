@@ -50,8 +50,8 @@ export function Components(){
       {/*  <button id='currLoc' value="Get Current Location ">Get Current Location</button>*/}
       {/*</a>*/}
       <SearchBar />
-      <GoogleMapComponent buildings={buildings}/>
       <BuildingGenerator buildings={buildings}/>
+      <GoogleMapComponent buildings={buildings}/>
     </div>
   )
 }
