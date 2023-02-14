@@ -4,7 +4,6 @@ import SearchBar from "./SearchBar";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import React from "react";
-import SearchBar from "./SearchBar";
 
 export interface BuildingInfo {
   buildingAbbr: string;
@@ -44,12 +43,12 @@ export function Components(){
       <a href={uwLink}>
         <button>to reserve</button>
       </a>
-        <a>
-            <button id='route' value="Get Route" >Get Route</button>
-        </a>
-      <a>
-        <button id='currLoc' value="Get Current Location ">Get Current Location</button>
-      </a>
+        {/*<a>*/}
+        {/*    <button id='route' value="Get Route" >Get Route</button>*/}
+        {/*</a>*/}
+      {/*<a>*/}
+      {/*  <button id='currLoc' value="Get Current Location ">Get Current Location</button>*/}
+      {/*</a>*/}
       <SearchBar />
       <GoogleMapComponent buildings={buildings}/>
       <BuildingGenerator buildings={buildings}/>
