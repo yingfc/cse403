@@ -41,14 +41,15 @@ class BuildingGenerator extends Component<BuildingProps> {
       <div>
         {this.parseBuilding(props)}
       </div>
-      <button className='navigate' onClick={() => this.navigate(props)}>Go To</button>
+      <button className='navigate' onClick={() => this.navigate(props.buildingAbbr)}>Go To</button>
     </div>
     return block;
   }
 
   // show the route from user current location to selected building.
-  async navigate(props: BuildingInfo): Promise<void> {
-    let buildingInfo = props;
+  async navigate(abbr: string): Promise<void> {
+    let buildingInfo: BuildingInfo | null;
+    buildingInfo = await getBuildingInfoFromBuildingAbbr(abbr);
     console.log("navigate: " + buildingInfo?.buildingAbbr + " " + buildingInfo?.latitude + ", " + buildingInfo?.longitude);
 
     try{
