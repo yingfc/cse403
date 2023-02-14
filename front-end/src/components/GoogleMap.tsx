@@ -4,6 +4,7 @@ import { center, containerStyle, options } from "../config/MapSettings";
 import { BuildingInfo } from ".";
 import {calculateAndDisplayRoute, calculateAndDisplayRouteDemo, GeoService} from "./Route";
 import {ClassInfo, getBuildingInfoFromClass} from "./SearchBar";
+import { reservable } from "./BuildingGenerator";
 
 
 export interface BuildingProps {
@@ -24,11 +25,11 @@ const GoogleMapComponent: React.FC<BuildingProps> = ({buildings}) => {
       label: abbr,
     });
 
-    if(abbr === "OUG") {
+    if(reservable.has(abbr)) {
       const contentString =
       `<div>
         <p>
-          <a href=${process.env.REACT_APP_UW_LIBRARY_RESERVATION_LINK}>This</a>
+          <a href=${reservable.get(abbr)}>This</a>
           is going to redirect to the reservation page....
         </p>
       </div>`;
