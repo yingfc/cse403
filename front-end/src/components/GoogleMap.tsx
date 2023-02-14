@@ -1,6 +1,6 @@
 import React from "react";
-import {GoogleMap, useJsApiLoader} from '@react-google-maps/api'
-import { center, containerStyle, options } from "../config/mapSettings";
+import {GoogleMap, InfoWindowF, useJsApiLoader} from '@react-google-maps/api'
+import { center, containerStyle, options } from "../config/MapSettings";
 import { BuildingInfo } from ".";
 import {calculateAndDisplayRoute, calculateAndDisplayRouteDemo, GeoService} from "./Route";
 import {ClassInfo, getBuildingInfoFromClass} from "./SearchBar";
@@ -21,7 +21,30 @@ const GoogleMapComponent: React.FC<BuildingProps> = ({buildings}) => {
     const marker = new google.maps.Marker({
       position: location,
       map: mapRef.current,
-    })
+      label: abbr,
+    });
+
+    if(abbr === "OUG") {
+      const contentString =
+      `<div>
+        <p>
+          <a href=${process.env.REACT_APP_UW_LIBRARY_RESERVATION_LINK}>This</a>
+          is going to redirect to the reservation page....
+        </p>
+      </div>`;
+
+      const infoWindow = new google.maps.InfoWindow({
+        content: contentString,
+        ariaLabel: "Reservation",
+      })
+      marker.addListener('mouseover', () => {
+        infoWindow.open({
+          anchor: marker,
+          map: mapRef.current
+        })
+      })
+    }
+
     marker.addListener("click", () =>{exhibitDetail(abbr)});
   }
 
