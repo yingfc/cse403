@@ -26,7 +26,7 @@ class BuildingGenerator extends Component<BuildingProps> {
     let building: JSX.Element;
     if (reservable.has(props.buildingAbbr)) {
       building = <div>
-        <a href={reservable.get(props.buildingAbbr)}>To Reserve</a>
+        <a href={reservable.get(props.buildingAbbr)}><button>To Reserve</button></a>
       </div>
     } else {
       building = <div>
@@ -47,7 +47,7 @@ class BuildingGenerator extends Component<BuildingProps> {
   }
 
   // show the route from user current location to selected building.
-  navigate(props: BuildingInfo): void {
+  async navigate(props: BuildingInfo): Promise<void> {
     let buildingInfo = props;
     console.log("navigate: " + buildingInfo?.buildingAbbr + " " + buildingInfo?.latitude + ", " + buildingInfo?.longitude);
 
