@@ -19,11 +19,11 @@ public class BuildingServiceImplementation implements BuildingService {
             // register JDBC driver
             Class.forName(GlobalDBCred.JDBC_DRIVER);
 
-            System.out.println("Link to database");
+            System.out.print("Link to database   ");
             conn = DriverManager.getConnection(GlobalDBCred.DB_URL,GlobalDBCred.USER,GlobalDBCred.PASS);
 
             // querying
-            System.out.println("===== Querying =====");
+            System.out.println(">>> Querying All Buildings");
             stmt = conn.createStatement();
             String sql;
             sql = "SELECT * FROM building";
@@ -70,11 +70,11 @@ public class BuildingServiceImplementation implements BuildingService {
             // register JDBC driver
             Class.forName(GlobalDBCred.JDBC_DRIVER);
 
-            System.out.println("Link to database");
+            System.out.print("Link to database  ");
             conn = DriverManager.getConnection(GlobalDBCred.DB_URL,GlobalDBCred.USER,GlobalDBCred.PASS);
 
             // querying
-            System.out.println("===== Querying =====");
+            System.out.println(">>> Querying Building: " + building_abbr);
             pstmt = conn.prepareStatement(SQL_QUERY);
             pstmt.setString(1, building_abbr);
 
@@ -121,6 +121,7 @@ public class BuildingServiceImplementation implements BuildingService {
             Class.forName(GlobalDBCred.JDBC_DRIVER);
             conn = DriverManager.getConnection(GlobalDBCred.DB_URL,GlobalDBCred.USER,GlobalDBCred.PASS);
             pstmt = conn.prepareStatement(SQL_QUERY);
+            System.out.println(">>> Querying Class: " + paramsMap.value("major") + " " + paramsMap.value("coursenum") + " " + paramsMap.value("section"));
             pstmt.setString(1, paramsMap.value("major"));
             pstmt.setInt(2, Integer.parseInt(paramsMap.value("coursenum")));
             pstmt.setString(3, paramsMap.value("section"));
