@@ -40,9 +40,9 @@ export function Components(){
 
   return (
     <div>
-      <a href={uwLink}>
-        <button>to reserve</button>
-      </a>
+      {/*<a href={uwLink}>*/}
+      {/*  <button>to reserve</button>*/}
+      {/*</a>*/}
         {/*<a>*/}
         {/*    <button id='route' value="Get Route" >Get Route</button>*/}
         {/*</a>*/}
