@@ -3,6 +3,7 @@ import BuildingGenerator from "./BuildingGenerator";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import React from "react";
+import SearchBar from "./SearchBar";
 
 export interface BuildingInfo {
   buildingAbbr: string;
@@ -48,6 +49,7 @@ export function Components(){
       <a>
         <button id='currLoc' value="Get Current Location ">Get Current Location</button>
       </a>
+      <SearchBar />
       <GoogleMapComponent buildings={buildings}/>
       <BuildingGenerator buildings={buildings}/>
     </div>
