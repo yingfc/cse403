@@ -75,3 +75,11 @@ This frontend of this project will be implemented with React and TypeScript and 
  ┃ ┗ 📜 Week7Report.md
  ┗ 📜 README.md
 ```
+---
+### Use Cases
+Ready for Beta Release (Feb 14th)
+- **Route navigation**: User can now enter course information (e.g. CSE 403 A) in the search bar and the map will show the navigation path from user's current location to the target building where the class is held.
+- **Room reservation**: User can now hover over to the building/library that are available for reservation, and a info window will show up with clickable link for the user to be redirected to the UW reservation system for room booking.
+
+Work in Progress
+- **Dining options**: User should be able to click a "show nearby dining options" button to see a list of currently opening restaurants around campus. And upon clicking the specific restaurant, it will show the navigation path to the dining/cafe on the map.
