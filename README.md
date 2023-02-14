@@ -52,16 +52,26 @@ This frontend of this project will be implemented with React and TypeScript and 
 ### Repository layout
 ```
 📦 cse403
- ┃
+ ┣ 📂 .github.workflow (CI related setting)
  ┣ 📂 back-end
+ ┃ ┗ 📂 test
+ ┃ ┃ ┗ 📂 navigation (route navigation related test)
  ┃ ┗ 📂 src
- ┃ ┃ ┗ 📂 db (keeps track of the databases of available rooms and reserved rooms and assign students their reserved rooms)
- ┃ ┃ ┃ ┗ 📜.gitkeep
+ ┃   ┗ 📂 db (keeps track of the databases of available rooms and reserved rooms and assign students their reserved rooms)
+ ┃   ┗ 📂 building (class for building endpoint)
+ ┃   ┗ 📂 navigation (classToBuilding demo file)
+ ┃   ┗ 📂 response (Spark response)
+ ┃   ┗ 📜 MySqlDemo.java (demo file to fetch data from database)
+ ┃   ┗ 📜 SparkJavaDemo.java (backend SparkJava server file)
  ┣ 📂 font-end
  ┃ ┗ 📂 src
- ┃ ┃ ┗ 📂 components (contains different components of the webpage, subject to further segmentation later on)
- ┃ ┃ ┃ ┗ 📜.gitkeep
- ┣ 📂 reports
+ ┃   ┗ 📂 components (contains different components of the webpage, subject to further segmentation later on)
+ ┃   ┗ 📂 config (map settings)
+ ┣ 📂 reports (weekly reports on progress/reflection)
  ┃ ┗ 📜 Week3Report.md
+ ┃ ┗ 📜 Week4Report.md
+ ┃ ┗ 📜 Week5Report.md
+ ┃ ┗ 📜 Week6Report.md
+ ┃ ┗ 📜 Week7Report.md
  ┗ 📜 README.md
 ```
