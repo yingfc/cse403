@@ -5,7 +5,7 @@ import axios from "axios";
 import {calculateAndDisplayRoute} from "./Route";
 
 
-const reservable: Map<string, string> = new Map<string, string>([["ALB", "https://cal.lib.uw.edu/spaces?lid=1449&gid=0"],
+export const reservable: Map<string, string> = new Map<string, string>([["ALB", "https://cal.lib.uw.edu/spaces?lid=1449&gid=0"],
 ["ELB", "https://cal.lib.uw.edu/reserve/engineering-group-study"],
 ["HSA", "https://cal.lib.uw.edu/reserve/hsl-group-study"],
 ["OUG", "https://cal.lib.uw.edu/spaces?lid=1454&gid=0"],

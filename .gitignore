@@ -37,5 +37,4 @@ bin
 /back-end/.DS_Store
 .DS_Store
 .metals/
-/back-end/local.properties
 .idea/

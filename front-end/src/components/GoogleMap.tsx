@@ -1,6 +1,6 @@
 import React from "react";
-import {GoogleMap, InfoWindowF, useJsApiLoader} from '@react-google-maps/api'
-import { center, containerStyle, options } from "../config/MapSettings";
+import {GoogleMap, useJsApiLoader} from '@react-google-maps/api'
+import { center, containerStyle, options } from "../config/mapSettings";
 import { BuildingInfo } from ".";
 import {calculateAndDisplayRoute, calculateAndDisplayRouteDemo, GeoService} from "./Route";
 import {ClassInfo, getBuildingInfoFromClass} from "./SearchBar";
