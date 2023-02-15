@@ -35,6 +35,7 @@ describe.only("Search Bar", () => {
   });
 
   test("Empty Input Error get null", async () => {
+    await sleep(1000);
     try {
       let result = await page.click("#search");
       expect(result).toEqual(null);
