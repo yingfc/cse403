@@ -21,6 +21,10 @@ const SearchBar: React.FC = () =>{
   const button = document.getElementById("search");
   let buildingInfo: BuildingInfo | null;
   const parseInput = async (input: string) => {
+    if (input ==  null) {
+      console.error("Empty input encountered");
+      return;
+    }
     let numId = input.search(/\d/);
     let major = input.substring(0, numId-1).trim();
     let courseNum = parseInt(input.substring(numId, numId+3));
