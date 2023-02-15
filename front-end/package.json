@@ -20,15 +20,15 @@
     "papaparse": "^5.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "5.0.1",
     "typescript": "^4.9.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "npx jest",
-    "ci": "BROWSER=none PORT=3000 start-server-and-test start http://localhost:3000 test",
+    "test:jest": "npx jest",
+    "test": "BROWSER=none PORT=3000 start-server-and-test start http://localhost:3000 test:jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -50,21 +50,12 @@
     ]
   },
   "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
+    "roots": ["<rootDir>/src"],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.tsx?$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
   },
   "devDependencies": {
     "@testing-library/react": "^13.4.0",
