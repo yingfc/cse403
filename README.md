@@ -67,7 +67,7 @@ This frontend of this project will be implemented with React and TypeScript and 
  ┃ ┗ 📂 src
  ┃   ┗ 📂 components (contains different components of the webpage, subject to further segmentation later on)
  ┃   ┗ 📂 config (map settings)
- ┃   ┗ 📂 tests (map settings)
+ ┃   ┗ 📂 tests
  ┣ 📂 reports (weekly reports on progress/reflection)
  ┃ ┗ 📜 Week3Report.md
  ┃ ┗ 📜 Week4Report.md
