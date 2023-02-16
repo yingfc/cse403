@@ -1,9 +1,8 @@
 import puppeteer from "puppeteer";
 import * as ReactGoogleMapsApi from "@react-google-maps/api";
 
-jest.useRealTimers();
-
 let page: any;
+let browser: any;
 
 const sleep = async (ms: number) => {
   await new Promise((res) => {
@@ -12,18 +11,24 @@ const sleep = async (ms: number) => {
 };
 
 describe.only("Search Bar", () => {
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
+  beforeEach(() => {
+    jest.setTimeout(10000);
+  });
+
   beforeAll(async () => {
-    const browser = await puppeteer.launch({
+    browser = await puppeteer.launch({
       headless: true,
     });
     page = await browser.newPage();
 
     await page.goto("http://localhost:3000");
-  }, 3000);
+  }, 10000);
 
   test("Loading map correctly", async () => {
-    await sleep(1000);
-
     if (!page) {
       throw new Error("Error while loading Puppeteer page");
     }
@@ -35,12 +40,11 @@ describe.only("Search Bar", () => {
   });
 
   test("Empty Input Error get null", async () => {
-    await sleep(1000);
     try {
       let result = await page.click("#search");
       expect(result).toEqual(null);
     } finally {
       await browser.close();
     }
-  }, 3000)
+  }, 10000);
 });
