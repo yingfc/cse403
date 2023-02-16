@@ -67,7 +67,9 @@
 
 **Chuteng**:
 
-- TODO
+- Implemented markers on the map
+- Setup and implemented unit tests for front end
+- Optmized data fetching between front & back end
 
 **Fengyi**:
 
@@ -93,7 +95,8 @@
 
 **Chuteng**:
 
-- TODO
+- Add more tests for front end
+- Optimized the marker UI
 
 **Fengyi**:
 
