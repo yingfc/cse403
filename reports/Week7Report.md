@@ -79,7 +79,8 @@
 
 **Wajdi**:
 
-- TODO
+- Continue developing the SQL queries
+- Record demo videos
 
 **Yingfan**:
 
@@ -108,7 +109,8 @@
 
 **Wajdi**:
 
-- TODO
+- Finishing Queries for the backend for building search in the final product
+- Setting up Mocha and SQL testing for front end and back end testing this week
 
 **Yingfan**:
 
