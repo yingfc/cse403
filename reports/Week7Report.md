@@ -63,7 +63,9 @@
 
 **Yigao**:
 
-- TODO
+- Finished Building details and related functions, add to building navigation function
+- Exhibit the search bar and building details on the map, all related function achieved
+- Add search bar test and finished front end test documentation
 
 **Chuteng**:
 
@@ -91,7 +93,9 @@
 
 **Yigao**:
 
-- TODO
+- Front end display feature setting up, making the UI more user friendly
+- Add more front end test to cover frequently appearing common cases and error cases
+- Add more details in individual building, and add routine page for navigation
 
 **Chuteng**:
 
