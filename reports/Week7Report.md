@@ -75,7 +75,7 @@
 
 **Fengyi**:
 
-- TODO
+- Implement DiningInfo in backend
 
 **Wajdi**:
 
@@ -104,7 +104,7 @@
 
 **Fengyi**:
 
-- TODO
+- Finish dining search result list
 
 **Wajdi**:
 
