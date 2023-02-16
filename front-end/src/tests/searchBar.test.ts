@@ -4,12 +4,6 @@ import * as ReactGoogleMapsApi from "@react-google-maps/api";
 let page: any;
 let browser: any;
 
-const sleep = async (ms: number) => {
-  await new Promise((res) => {
-    setTimeout(res, ms);
-  });
-};
-
 describe.only("Search Bar", () => {
   afterEach(() => {
     jest.useRealTimers();
