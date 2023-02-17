@@ -1,4 +1,3 @@
-
 back-end/.idea
 
 # dependencies
@@ -37,3 +36,4 @@ bin
 .DS_Store
 .metals/
 .idea/
+.env
