@@ -25,6 +25,9 @@ class code, and the user would be able to get a list of classes in the building.
 
 ### How to Run DubMap
 
+> **Note**
+> The database instance hosted on GCP will often-times be turned off to save money for your dev account, if any course staff wants to try out DubMap, please ping Yingfan on Slack.
+
 #### Backend SparkJava Server
 - git pull
 - load the entire project in IntelliJ
