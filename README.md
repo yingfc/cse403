@@ -17,8 +17,8 @@
 - Linked with MyUW, and automatically generate routine among each classroom per day, without human intervention.
 - Try to suggest and lead students to an appropriate study place during the spare time between lectures, according to routine, time, and facility requirements, saving time for finding spots.
 - Optimize facilities usage in general by integrating classrooms on the map with the
-associates class code. For example, the user would be able to search for building with
-class code, and the user would be able to get a list of classes in the building.
+  associates class code. For example, the user would be able to search for building with
+  class code, and the user would be able to get a list of classes in the building.
 - Have a centralized platform through which the users can explore their options of room reservation through campus
 
 ---
@@ -32,7 +32,12 @@ class code, and the user would be able to get a list of classes in the building.
 - git pull
 - load the entire project in IntelliJ
 - set up project SDK in *File > Project Structure > Project*, choose JDK 11 and apply
-- go to *backend/local.properties* and add the password of db there, plz ask @Yingfan (Eric) Chen for the password
+- go to root directory of the project and create a `.env` file and add the db information there, plz ask @Yingfan (Eric) Chen for the username & password
+```
+  DB_URL="jdbc:mysql://34.145.35.221/dubmap_backend?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+  DB_USER=""
+  DB_PASSWORD=""
+```
 - go to *build.gradle* or gradle sidebar on the right of IDEA UI to reload the project (it will take some time to download all the dependences for the first time)
 - go to *back-end/src/SparkJavaDemo*, run it
 - when you see logs saying **Server - Started**, go to **localhost:4567/hello**, and try out all the endpoints
