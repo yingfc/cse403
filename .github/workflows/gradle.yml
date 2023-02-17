@@ -9,7 +9,7 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "ci_test" ]
   pull_request:
     branches: [ "main" ]
 
@@ -37,13 +37,13 @@ jobs:
       uses: gradle/gradle-build-action@v2
 
     - name: Load GitHub Actions Secrets
-      env:
-        DB_KEY: ${{ secrets.GCP_DB_KEY }}
       run: | 
-        echo "The GitHub Action Secret will be masked:"
-        echo ${{ secrets.GCP_DB_KEY }}
-        mkdir -p back-end/
-        echo "${{ secrets.GCP_DB_KEY }}" > back-end/local.properties
+        echo "The GitHub Action Secret will be masked: ${{ secrets.GCP_DB_KEY_CI }}"
+        echo "DB USER: ${{ secrets.GCP_DB_USER }}"
+        echo "DB URL: ${{ secrets.GCP_DB_URL }}"
+        echo "DB_URL=${{ secrets.GCP_DB_URL }}" >> .env
+        echo "DB_USER=${{ secrets.GCP_DB_USER }}" >> .env
+        echo "DB_PASSWORD=${{ secrets.GCP_DB_KEY_CI }}" >> .env
 
 #    - name: Build with Gradle
 #      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
