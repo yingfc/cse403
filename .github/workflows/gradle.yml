@@ -37,11 +37,10 @@ jobs:
       uses: gradle/gradle-build-action@v2
 
     - name: Load GitHub Actions Secrets
-      env:
-        DB_KEY: ${{ secrets.GCP_DB_KEY }}
       run: | 
-        echo "The GitHub Action Secret will be masked:"
-        echo ${{ secrets.GCP_DB_KEY }}
+        echo "The GitHub Action Secret will be masked: ${{ secrets.GCP_DB_KEY_CI }}"
+        echo "DB USER: ${{ secrets.GCP_DB_USER }}"
+        echo "DB URL: ${{ secrets.GCP_DB_URL }}"
         echo "DB_URL=${{ secrets.GCP_DB_URL }}" >> .env
         echo "DB_USER=${{ secrets.GCP_DB_USER }}" >> .env
         echo "DB_PASSWORD=${{ secrets.GCP_DB_KEY_CI }}" >> .env
