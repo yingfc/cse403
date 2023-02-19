@@ -61,7 +61,15 @@ REACT_APP_DUBMAP_SERVER=http://localhost:4567/
 - navigate to the root directory of the `front-end/` and run `npm i` and then `npm run start` to launch the project frontend.
 - the frontend server will be running on endpoint: `localhost:3000` by default
 ---
+### How to Run test
+#### Backend
+- To conduct our back-end testing, we are using Junit testing infrastructure using a Gradle build
+- Simple run `./gradlew build --info` in the command line will run the backend tests
+#### Frontend
+- To conduct our front-end testing we are using puppeteer framework to support CSS, HTML, and JavaScript testing.
+- To run/add a new front-end test, each developer adds a new testing file to `front-end/src/tests`, and run the command `npm run test` will automatically read all the files in that directory and execute the tests.
 
+---
 ### Tool sets
 This frontend of this project will be implemented with React and TypeScript and the backend will use SparkJava with Java. The database is hosted on Google Cloud Platform.
 
