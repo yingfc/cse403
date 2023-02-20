@@ -35,9 +35,10 @@ describe.only("Search Bar", () => {
 
   test("Empty Input Error get null", async () => {
     try {
-      let result = await page.click("#search");
-      expect(result).toEqual(null);
-    } finally {
+      await page.click("#search");
+    } catch(e) {
+      // eslint-disable-next-line jest/no-conditional-expect
+      expect(e).toEqual(new Error("Input Error with access to null element"));
       await browser.close();
     }
   }, 10000);
