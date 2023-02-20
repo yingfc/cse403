@@ -22,8 +22,7 @@ const SearchBar: React.FC = () =>{
   let buildingInfo: BuildingInfo | null;
   const parseInput = async (input: string) => {
     if (input ==  null) {
-      console.error("Empty input encountered");
-      return;
+      throw new Error("Input Error with access to null element");
     }
     let numId = input.search(/\d/);
     let major = input.substring(0, numId-1).trim();
@@ -38,7 +37,7 @@ const SearchBar: React.FC = () =>{
       parseInput(input!.value).then(x => console.log("eric: ", buildingInfo)).then(x => calculateAndDisplayRoute(directionsService, directionsRenderer, geo.currLat!, geo.currLong!, buildingInfo!))
     });
   } catch (e) {
-    console.error("Input Error with access to null element: " + e);
+    console.error(e);
   }
 
   return (
@@ -52,7 +51,6 @@ const SearchBar: React.FC = () =>{
 export async function getBuildingInfoFromClass(cls: ClassInfo) {
   try {
     const response = await axios.get(process.env.REACT_APP_DUBMAP_SERVER + "class?major=" + cls.major + "&coursenum=" + cls.courseNum + "&section=" + cls.section);
-    console.log(response);
     return response.data.data as BuildingInfo;
   } catch {
     alert("Unable to get specific building from course: " + cls.major + cls.courseNum + cls.section);
