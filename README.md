@@ -20,7 +20,6 @@
 - Optimize facilities usage in general by integrating classrooms on the map with the associates class code. For example, the user would be able to search for building with
   class code, and the user would be able to get a list of classes in the building.
 - Have a centralized platform through which the users can explore their options of room reservation through campus
-
 ---
 
 ### How to Run DubMap
@@ -28,8 +27,8 @@
 > **Note**
 > The database instance hosted on GCP will often-times be turned off to save money for your dev account, if any course staff wants to try out DubMap, please ping Yingfan on Slack.
 
+#### To obtain the source code, run the command `git clone git@github.com:yingfc/cse403.git` to clone the entire project to your local machine.
 #### Backend SparkJava Server
-- `git clone git@github.com:yingfc/cse403.git`
 - load the entire project in IntelliJ
 - set up project SDK in **File > Project Structure > Project**, choose **JDK 11** and apply
 - go to root directory of the project and create a `.env` file and add the db information there, plz ask **@Yingfan (Eric) Chen** for the username & password
@@ -61,15 +60,29 @@ REACT_APP_DUBMAP_SERVER=http://localhost:4567/
 - navigate to the root directory of the `front-end/` and run `npm i` and then `npm run start` to launch the project frontend.
 - the frontend server will be running on endpoint: `localhost:3000` by default
 ---
-### How to Run test
-#### Backend
-- To conduct our back-end testing, we are using Junit testing infrastructure using a Gradle build
-- Simple run `./gradlew build --info` in the command line will run the backend tests
-#### Frontend
-- To conduct our front-end testing we are using puppeteer framework to support CSS, HTML, and JavaScript testing.
-- To run/add a new front-end test, each developer adds a new testing file to `front-end/src/tests`, and run the command `npm run test` will automatically read all the files in that directory and execute the tests.
 
+### How to use DubMap
+- There are three main functionalities in our Map system
+  - **Route navigation**: On the map homepage, user can either enter the course information (e.g. **CSE 403 A**) they are to look for and click the **Go** button, or they can simply select a building marker on the map and then click the **Go there** button. The map system will show the navigation route from user's current location to the target building in both cases. 
+  - **Room reservation**: On the map homepage, user can hover over the mouse to buildings that are open for room reservation, and an info window will pop up right next to the building with clickable words for user to redirect to the corresponding reservation webpage. Then the user can book a room there. 
+  - **Dining options**: work in progress
 ---
+
+### Known bugs
+- [Issues](https://github.com/yingfc/cse403/issues)
+---
+
+### How to Run/Add test
+#### Backend
+- To conduct our back-end testing, we are using Junit testing infrastructure using a Gradle build.
+- Simple run `./gradlew build --info` in the command line will run the backend tests.
+- To add new back-end tests, developers need to add new testing file to the folder `back-end/test/`, and our config on gradle will automatically pick up the new tests under this directory.
+#### Frontend
+- To conduct our front-end testing, we are using puppeteer framework to support CSS, HTML, and JavaScript testing.
+- To run front-end tests, first have the backend server running, then run the command `npm run test` will automatically read all the files in that directory and execute the tests.
+- To add new front-end tests, developers need to add new testing files to the folder `front-end/src/tests`, then follow the previous step to run the test.
+---
+
 ### Tool sets
 This frontend of this project will be implemented with React and TypeScript and the backend will use SparkJava with Java. The database is hosted on Google Cloud Platform.
 
@@ -101,6 +114,7 @@ This frontend of this project will be implemented with React and TypeScript and 
  ┗ 📜 README.md
 ```
 ---
+
 ### Use Cases
 Ready for Beta Release (Feb 14th)
 - **Route navigation**: User can now enter course information (e.g. CSE 403 A) in the search bar and the map will show the navigation path from user's current location to the target building where the class is held.
