@@ -1,5 +1,7 @@
 package building;
 
+import java.util.Objects;
+
 public class BuildingInfo {
     private String buildingAbbr;
     private String buildingFullName;;
@@ -43,5 +45,18 @@ public class BuildingInfo {
 
     public void setLongitude(double longitude) {
         this.longitude = longitude;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof BuildingInfo)) return false;
+        BuildingInfo that = (BuildingInfo) o;
+        return Double.compare(that.latitude, latitude) == 0 && Double.compare(that.longitude, longitude) == 0 && buildingAbbr.equals(that.buildingAbbr) && buildingFullName.equals(that.buildingFullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(buildingAbbr, buildingFullName, latitude, longitude);
     }
 }
