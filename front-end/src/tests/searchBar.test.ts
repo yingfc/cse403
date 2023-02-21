@@ -34,13 +34,15 @@ describe.only("Search Bar", () => {
   });
 
   test("Empty Input Error", async () => {
-    const selector = "#search"
+    const selector = '#search'
     try {
-      page.click(selector);
+      await page.waitForSelector(selector)
+      await page.click(selector);
     } catch(e) {
-      // eslint-disable-next-line jest/no-conditional-expect
-      expect(e).toBe(Error)
+      throw new Error("unexpected error appeared");
     }
-    expect(1).toEqual(2);
+    let para = await page.$("[id='error_msg']");
+    let text = await (await para.getProperty('textContent')).jsonValue()
+    expect(text).toEqual("");
   });
 });
