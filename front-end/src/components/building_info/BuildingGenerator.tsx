@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { BuildingInfo } from './index';
-import {BuildingProps, directionsRenderer, directionsService, geo} from './GoogleMap';
+import { BuildingInfo } from '../index';
+import {BuildingProps, directionsRenderer, directionsService, geo} from '../map/GoogleMap';
 import axios from "axios";
-import {calculateAndDisplayRoute} from "./Route";
+import {calculateAndDisplayRoute} from "../map/Route";
 
 
 export const reservable: Map<string, string> = new Map<string, string>([["ALB", "https://cal.lib.uw.edu/spaces?lid=1449&gid=0"],

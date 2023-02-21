@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { BuildingInfo } from '.';
+import { BuildingInfo } from '..';
 import React from 'react';
-import {calculateAndDisplayRoute} from "./Route";
-import {directionsRenderer, directionsService, geo} from "./GoogleMap";
+import {calculateAndDisplayRoute} from "../map/Route";
+import {directionsRenderer, directionsService, geo} from "../map/GoogleMap";
 
 export class ClassInfo {
   major: string;

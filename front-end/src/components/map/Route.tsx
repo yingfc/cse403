@@ -1,4 +1,4 @@
-import {BuildingInfo} from "./index";
+import {BuildingInfo} from "../index";
 
 export function calculateAndDisplayRouteDemo(
     directionsService: google.maps.DirectionsService,

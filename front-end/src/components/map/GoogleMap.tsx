@@ -1,9 +1,9 @@
 import React from "react";
 import {GoogleMap, useJsApiLoader} from '@react-google-maps/api'
-import { center, containerStyle, options } from "../config/MapSettings";
-import { BuildingInfo } from ".";
+import { center, containerStyle, options } from "../../config/MapSettings";
+import { BuildingInfo } from "..";
 import {GeoService} from "./Route";
-import { reservable } from "./BuildingGenerator";
+import { reservable } from "../building_info/BuildingGenerator";
 
 
 export interface BuildingProps {
