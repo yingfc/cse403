@@ -14,7 +14,7 @@ jobs:
       run: npm install
       
     - name: Install Jest
-      run: npm install --save-dev jest
+      run: npm install --save-dev ts-jest
 
     - name: Run Puppeteer tests
       run: npm test
