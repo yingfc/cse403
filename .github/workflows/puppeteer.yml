@@ -13,6 +13,15 @@ jobs:
     - name: Install dependencies
       run: npm install
       
+    - name: Install Puppeteer
+      run: npm install puppeteer
+      
+    - name: Install Google API
+      run: npm install @react-google-maps/api
+      
+    - name: Install types jest
+      run: npm i --save-dev @types/jest 
+      
     - name: Install Jest
       run: npm install --save-dev ts-jest
 
