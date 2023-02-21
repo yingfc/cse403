@@ -4,7 +4,7 @@
   "description": "- Map with clickable buildings, with navigation systems that can lead students to travel through different buildings.\r - Adapt list of available buildings to reserve rooms into the user’s choice of their major\r - Reservation availability of each room of buildings synchronous to the UW Library system, with the description of each room, such as maximum people allowed and facilities included.\r - For the room reservation system, find out whether students are allowed in the specific building. If not, suggest rooms with availability and permission.\r - Based on the location provided by the user, search and display a list of dining places information sorted by distance.",
   "main": "index.js",
   "scripts": {
-  "test": "jest front-end/src/tests/"
+  "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,21 @@
     "axios": "^1.3.2",
     "csv": "^6.2.7",
     "stream": "^0.0.2"
+  }
+  "jest": {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "testMatch": [
+    "**/front-end/src/tests/**/*.test.ts"
+  ],
+  "collectCoverageFrom": [
+    "front-end/src/**/*.{ts,tsx}",
+    "!**/node_modules/**"
+  ],
+  "coverageReporters": [
+    "json-summary",
+    "text",
+    "lcov"
+  ]
   }
 }
