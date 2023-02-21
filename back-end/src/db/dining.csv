@@ -1,23 +1,23 @@
-Type,dining_name,building_name,Building_Abbr
-RESTAURANTS,By George,Odegaard Undergraduate Library,OUG
-RESTAURANTS,Center Table,Willow Hall,WLW
-RESTAURANTS,Husky Den Food Court,Husky Union Building (HUB),HUB
-RESTAURANTS,Local Point,Lander Hall,LAH
-RESTAURANTS,Orin's Place,Paccar Hall,PCAR
-RESTAURANTS,"Pagliacci Pizza, North Campus",Willow Hall,WLW
-RESTAURANTS,"Pagliacci Pizza, The HUB",Husky Den in the HUB,HUB
-RESTAURANTS,The Rotunda,Magnuson Health Sciences Center I-Court,HIS
-CAFES & ESPRESSO BARS,Denny Cafe,Oak Hall,OAK
-CAFES & ESPRESSO BARS,Evolutionary Grounds,Life Sciences Building,LSB
-CAFES & ESPRESSO BARS,"Husky Grind Cafe, District Market",District Market in Alder Hall,ALD
-CAFES & ESPRESSO BARS,"Husky Grind Cafe, Mercer Court",Mercer Court,MRC
-CAFES & ESPRESSO BARS,Microsoft Cafe,The Bill and Melinda Gates Center for Computer Science & Engineering,CSE2
-CAFES & ESPRESSO BARS,Public Grounds,Parrington Hall,PAR
-CAFES & ESPRESSO BARS,Rotunda Espresso,Magnuson Health Sciences Center I-Court,HIS
-CAFES & ESPRESSO BARS,"Starbucks Coffee, HUB",Husky Union Building (HUB),HUB
-CAFES & ESPRESSO BARS,"Starbucks Coffee, Population Health",The Hans Rosling Center for Population Health,HRC
-CAFES & ESPRESSO BARS,"Starbucks Coffee, Suzzallo",Suzzallo Library,SUZ
-CAFES & ESPRESSO BARS,Tower Cafe,UW Tower,UWT
-MARKETS,"District Market, Alder",Alder Hall,ALD
-MARKETS,"District Market, Oak",Oak Hall,OAK
-MARKETS,"Etc., HUB",Husky Union Building,HUB
+dining_id,Type,dining_name,building_name,Building_Abbr
+1,RESTAURANTS,By George,Odegaard Undergraduate Library,OUG
+2,RESTAURANTS,Center Table,Willow Hall,WLW
+3,RESTAURANTS,Husky Den Food Court,Husky Union Building (HUB),HUB
+4,RESTAURANTS,Local Point,Lander Hall,LAH
+5,RESTAURANTS,Orin's Place,Paccar Hall,PCAR
+6,RESTAURANTS,"Pagliacci Pizza, North Campus",Willow Hall,WLW
+7,RESTAURANTS,"Pagliacci Pizza, The HUB",Husky Den in the HUB,HUB
+8,RESTAURANTS,The Rotunda,Magnuson Health Sciences Center I-Court,HIS
+9,CAFES & ESPRESSO BARS,Denny Cafe,Oak Hall,OAK
+10,CAFES & ESPRESSO BARS,Evolutionary Grounds,Life Sciences Building,LSB
+11,CAFES & ESPRESSO BARS,"Husky Grind Cafe, District Market",District Market in Alder Hall,ALD
+12,CAFES & ESPRESSO BARS,"Husky Grind Cafe, Mercer Court",Mercer Court,MRC
+13,CAFES & ESPRESSO BARS,Microsoft Cafe,The Bill and Melinda Gates Center for Computer Science & Engineering,CSE2
+14,CAFES & ESPRESSO BARS,Public Grounds,Parrington Hall,PAR
+15,CAFES & ESPRESSO BARS,Rotunda Espresso,Magnuson Health Sciences Center I-Court,HIS
+16,CAFES & ESPRESSO BARS,"Starbucks Coffee, HUB",Husky Union Building (HUB),HUB
+17,CAFES & ESPRESSO BARS,"Starbucks Coffee, Population Health",The Hans Rosling Center for Population Health,HRC
+18,CAFES & ESPRESSO BARS,"Starbucks Coffee, Suzzallo",Suzzallo Library,SUZ
+19,CAFES & ESPRESSO BARS,Tower Cafe,UW Tower,UWT
+20,MARKETS,"District Market, Alder",Alder Hall,ALD
+21,MARKETS,"District Market, Oak",Oak Hall,OAK
+22,MARKETS,"Etc., HUB",Husky Union Building,HUB
