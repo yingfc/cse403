@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3ebfa91-97e9-4e10-b4f4-e4a142a7856e" name="Changes" comment="Adding Dependencies">
-      <change afterPath="$PROJECT_DIR$/back-end/src/navigation/classToDining.java" afterDir="false" />
+    <list default="true" id="f3ebfa91-97e9-4e10-b4f4-e4a142a7856e" name="Changes" comment="Adding A tentative class that does what ClassToBuilding does but with dining options that we have">
+      <change afterPath="$PROJECT_DIR$/back-end/src/navigation/ClassToClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +54,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="ci_test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,7 +89,20 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SparkJavaDemo">
+  <component name="RunManager" selected="Application.ClassToClass">
+    <configuration name="ClassToClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="navigation.ClassToClass" />
+      <module name="cse403.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="navigation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SparkJavaDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SparkJavaDemo" />
       <module name="cse403.main" />
@@ -164,34 +177,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="cse403 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ClassToClass" />
         <item itemvalue="Gradle.cse403 [dependencies]" />
         <item itemvalue="Application.SparkJavaDemo" />
         <item itemvalue="Gradle.ClassToBuildingTest" />
         <item itemvalue="Gradle.ClassToBuildingTest (1)" />
-        <item itemvalue="Gradle.cse403 [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +209,8 @@
       <workItem from="1676269394571" duration="682000" />
       <workItem from="1676321963297" duration="1874000" />
       <workItem from="1677017395619" duration="229000" />
-      <workItem from="1677018669038" duration="356000" />
+      <workItem from="1677018669038" duration="1039000" />
+      <workItem from="1677019733107" duration="332000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Dependencies">
       <created>1677017604348</created>
@@ -226,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677017604348</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding A tentative class that does what ClassToBuilding does but with dining options that we have">
+      <created>1677019225422</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677019225422</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +245,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding Dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Dependencies" />
+    <MESSAGE value="Adding A tentative class that does what ClassToBuilding does but with dining options that we have" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding A tentative class that does what ClassToBuilding does but with dining options that we have" />
   </component>
 </project>
