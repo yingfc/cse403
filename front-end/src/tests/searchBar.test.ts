@@ -33,13 +33,14 @@ describe.only("Search Bar", () => {
     });
   });
 
-  test("Empty Input Error get null", async () => {
+  test("Empty Input Error", async () => {
+    const selector = "#search"
     try {
-      await page.click("#search");
+      page.click(selector);
     } catch(e) {
       // eslint-disable-next-line jest/no-conditional-expect
-      expect(e).toEqual(new Error("Input Error with access to null element"));
-      await browser.close();
+      expect(e).toBe(Error)
     }
-  }, 10000);
+    expect(1).toEqual(2);
+  });
 });
