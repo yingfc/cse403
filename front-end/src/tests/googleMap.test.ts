@@ -1,7 +1,5 @@
 import puppeteer from "puppeteer";
 import * as ReactGoogleMapsApi from "@react-google-maps/api";
-import { render } from "@testing-library/react";
-import GoogleMapComponent from "../components/map/GoogleMap";
 
 let page: any;
 
