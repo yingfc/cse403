@@ -21,20 +21,4 @@
     "csv": "^6.2.7",
     "stream": "^0.0.2"
   }
-  "jest": {
-  "preset": "ts-jest",
-  "testEnvironment": "node",
-  "testMatch": [
-    "**/front-end/src/tests/**/*.test.ts"
-  ],
-  "collectCoverageFrom": [
-    "front-end/src/**/*.{ts,tsx}",
-    "!**/node_modules/**"
-  ],
-  "coverageReporters": [
-    "json-summary",
-    "text",
-    "lcov"
-  ]
-  }
 }
