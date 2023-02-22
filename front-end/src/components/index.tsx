@@ -16,9 +16,6 @@ export function Components(){
 
   const [buildings, setBuildings] = useState<BuildingInfo[]>([]);
 
-  const uwLink: string = process.env.REACT_APP_UW_LIBRARY_RESERVATION_LINK as string;
-
-
   useEffect(() => {
     console.log("rendering components")
     const getBuildings = async () => {
@@ -27,7 +24,7 @@ export function Components(){
       console.log(buildings);
     }
     getBuildings();
-  }, []);
+  }, [buildings]);
 
   console.log(buildings);
 

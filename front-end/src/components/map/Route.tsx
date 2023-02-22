@@ -24,7 +24,7 @@ export function calculateAndDisplayRoute(
     srcLong: number,
     dstLocation: BuildingInfo,
 ) {
-    if (dstLocation == undefined || dstLocation.latitude == undefined || dstLocation.longitude == undefined) {
+    if (dstLocation === undefined || dstLocation.latitude === undefined || dstLocation.longitude === undefined) {
         window.alert("Destination corresponding to the course does not exist, please check again.")
     }
     directionsService
