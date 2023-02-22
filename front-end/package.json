@@ -64,8 +64,7 @@
       "jsx",
       "json",
       "node"
-    ],
-    "testTimeout": 30000
+    ]
   },
   "devDependencies": {
     "@testing-library/react": "^13.4.0",

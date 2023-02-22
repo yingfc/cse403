@@ -64,12 +64,17 @@ REACT_APP_DUBMAP_SERVER=http://localhost:4567/
 ### How to use DubMap
 - There are three main functionalities in our Map system
   - **Route navigation**: On the map homepage, user can either enter the course information (e.g. **CSE 403 A**) they are to look for and click the **Go** button, or they can simply select a building marker on the map and then click the **Go there** button. The map system will show the navigation route from user's current location to the target building in both cases. 
+  - ![img.png](screenshots/routeNavigation.png)
   - **Room reservation**: On the map homepage, user can hover over the mouse to buildings that are open for room reservation, and an info window will pop up right next to the building with clickable words for user to redirect to the corresponding reservation webpage. Then the user can book a room there. 
+  - ![img.png](screenshots/roomReservation.png)
   - **Dining options**: work in progress
 ---
 
 ### Known bugs
 - [Issues](https://github.com/yingfc/cse403/issues)
+### How to Report a bug
+- Go to the above [Issues](https://github.com/yingfc/cse403/issues) page on GitHub UI, and click the new Issue button to report a bug![img.png](screenshots/newIssue.png)
+
 ---
 
 ### How to Run/Add test
@@ -81,6 +86,14 @@ REACT_APP_DUBMAP_SERVER=http://localhost:4567/
 - To conduct our front-end testing, we are using puppeteer framework to support CSS, HTML, and JavaScript testing.
 - To run front-end tests, first have the backend server running, then run the command `npm run test` will automatically read all the files in that directory and execute the tests.
 - To add new front-end tests, developers need to add new testing files to the folder `front-end/src/tests`, then follow the previous step to run the test.
+---
+
+### How to build a release of the software
+- Go to [repo](https://github.com/yingfc/cse403) on GitHub UI
+- Click **Create a new release** on the right sidebar 
+- ![img.png](screenshots/releaseBtn.png)
+- Then fill out the title and description of the release 
+- ![img_1.png](screenshots/releasePage.png)
 ---
 
 ### Tool sets
