@@ -26,7 +26,7 @@ jobs:
       run: npm install --save-dev ts-jest
 
     - name: Run Puppeteer tests
-      run: npm test
+      run: npm test:jest --detectOpenHandles
 
       env:
         PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
