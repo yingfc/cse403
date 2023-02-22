@@ -1,11 +1,13 @@
 import puppeteer from "puppeteer";
 import * as ReactGoogleMapsApi from "@react-google-maps/api";
+import axios from "axios";
 
 let page: any;
 
 describe.only("Google Map:", () => {
   afterEach(() => {
     jest.useRealTimers();
+    axios.defaults.baseURL = process.env.REACT_APP_DUBMAP_SERVER;
   });
 
   beforeAll(async () => {
