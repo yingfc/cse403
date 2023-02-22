@@ -28,7 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test:jest": "npx jest",
-    "test": "BROWSER=none PORT=3000 start-server-and-test start http://localhost:3000 test:jest",
+    "test": "BROWSER=none PORT=3000 start-server-and-test start http://127.0.0.1:3000 test:jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
