@@ -16,7 +16,7 @@ describe.only("Google Map:", () => {
     });
     page = await browser.newPage();
 
-    await page.goto("http://localhost:3000");
+    await page.goto("http://127.0.0.1:3000");
   }, 10000);
 
   it("Loading map correctly", async () => {

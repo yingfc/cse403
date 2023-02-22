@@ -20,7 +20,7 @@ describe.only("Search Bar", () => {
     });
     page = await browser.newPage();
     axios.defaults.baseURL = process.env.REACT_APP_DUBMAP_SERVER;
-    await page.goto("http://localhost:3000");
+    await page.goto("http://127.0.0.1:3000");
   }, 10000);
 
   test("Loading map correctly", async () => {
