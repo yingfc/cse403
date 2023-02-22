@@ -89,11 +89,19 @@ REACT_APP_DUBMAP_SERVER=http://localhost:4567/
 ---
 
 ### How to build a release of the software
+- Trigger the pipeline to build and check that all tests are pass
+- Have developers check that the website app is behaving as intended
 - Go to [repo](https://github.com/yingfc/cse403) on GitHub UI
 - Click **Create a new release** on the right sidebar 
 - ![img.png](screenshots/releaseBtn.png)
 - Then fill out the title and description of the release 
 - ![img_1.png](screenshots/releasePage.png)
+---
+
+### How To Run And Use DubMaps
+- Open Your browser
+- Visit the link https://yingfc.github.io/cse403 (this link is a placeholder)
+- You can now use DubMaps and its functionalities 
 ---
 
 ### Tool sets
