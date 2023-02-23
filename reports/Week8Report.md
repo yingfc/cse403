@@ -63,7 +63,9 @@
 
 **Yigao**:
 
-- TODO
+- Set up front end display features
+- Add debug front end unit test
+- Adjust the front end file strucutre based on the feedback
 
 **Chuteng**:
 
@@ -89,7 +91,8 @@
 
 **Yigao**:
 
-- TODO
+- Continually work on front end details and ui
+- Add more test for frontend
 
 **Chuteng**:
 
