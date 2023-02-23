@@ -72,7 +72,8 @@
 
 **Fengyi**:
 
-- TODO
+- Implement 'dining' on backend
+- Create dining_open_hr.csv
 
 **Wajdi**:
 
@@ -97,7 +98,7 @@
 
 **Fengyi**:
 
-- TODO
+- Working on dining search options
 
 **Wajdi**:
 
