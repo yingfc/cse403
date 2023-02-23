@@ -67,7 +67,8 @@
 
 **Chuteng**:
 
-- TODO
+- Setup and debug front end unit test
+- Trying to make frontend ci work
 
 **Fengyi**:
 
@@ -91,7 +92,8 @@
 
 **Chuteng**:
 
-- TODO
+- Work on debuging frontend ci
+- Debug frontend render problem
 
 **Fengyi**:
 
