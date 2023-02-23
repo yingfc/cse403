@@ -79,7 +79,9 @@
 
 **Wajdi**:
 
-- TODO
+- Updated README with some documentation
+- Set up Pupeteer CI on the repo and making sure it works with tests
+- Added classToDining variant
 
 **Yingfan**:
 
@@ -105,7 +107,8 @@
 
 **Wajdi**:
 
-- TODO
+- Continue implementing filters on the backend
+- Help solve CI issue
 
 **Yingfan**:
 
