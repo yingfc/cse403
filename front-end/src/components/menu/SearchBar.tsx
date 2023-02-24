@@ -3,6 +3,7 @@ import { BuildingInfo } from '..';
 import React from 'react';
 import {calculateAndDisplayRoute} from "../map/Route";
 import {directionsRenderer, directionsService, geo} from "../map/GoogleMap";
+import DinningBtn from './DinningBtn';
 
 export class ClassInfo {
   major: string;
@@ -47,6 +48,7 @@ const SearchBar: React.FC = () =>{
     <input id="input" type="text" placeholder='CSE 403 A'/>
     <button id="search" type="button" >Go!</button>
     <p id="error_msg" style={{display: "none"}}></p>
+    <DinningBtn />
   </div>
   )
 };
