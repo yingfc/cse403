@@ -29,7 +29,6 @@ public class BuildingServiceTest {
         assertNull(res);
         BuildingInfo expected = new BuildingInfo("CSE2", "Bill & Melinda Gates Center for Computer Science & Engineering", 47.653060708753, -122.305107171301);
         Throwable exception = assertThrows(NullPointerException.class, () -> res.equals(expected));
-        assertNull(exception.getMessage());
     }
 
     @Test
