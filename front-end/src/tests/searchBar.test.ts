@@ -23,6 +23,10 @@ describe.only("Search Bar", () => {
     await page.goto("http://127.0.0.1:3000");
   }, 10000);
 
+  afterAll(() => {
+    browser.close();
+  })
+
   test("Loading map correctly", async () => {
     if (!page) {
       throw new Error("Error while loading Puppeteer page");
