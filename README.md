@@ -98,6 +98,19 @@ REACT_APP_DUBMAP_SERVER=http://localhost:4567/
 - ![img_1.png](screenshots/releasePage.png)
 ---
 
+### How To Deploy DubMaps
+#### Backend
+- We are running our backend API server on AWS EC2 instance (ubuntu linux). 
+- To run the backend server on the instance, first navigate to the repo top level
+- Create an executable jar distribution via running `./gradlew shadowJar`
+- Then open a screen session by typing `screen` in the bash prompt
+- Then run `java -jar build/libs/cse403-1.0-SNAPSHOT-all.jar` to start the SparkJava server
+- Type `CTRL` + `A` followed by `d` to detach your screen session, the script (backend server) will continue to run
+- You can disconnect from the SSH session. And once you log back in, you can resume your session by typing in `screen -r`. This is assuming that you have only one detached session.
+#### Frontend
+- TODO
+---
+
 ### How To Run And Use DubMaps
 - Open Your browser
 - Visit the link https://yingfc.github.io/cse403 (this link is a placeholder)
