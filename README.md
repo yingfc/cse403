@@ -28,7 +28,9 @@
 > The database instance hosted on GCP will often-times be turned off to save money for your dev account, if any course staff wants to try out DubMap, please ping Yingfan on Slack.
 
 #### To obtain the source code, run the command `git clone git@github.com:yingfc/cse403.git` to clone the entire project to your local machine.
-#### Backend SparkJava Server
+#### Backend SparkJava Server (Live!!!)
+> **Note**
+> The Backend Server has been deployed to cloud machine on AWS (http://35.91.246.29:4567/hello), and you will not need to run it anymore :) But feel free to continue read if you are interested.
 - load the entire project in IntelliJ
 - set up project SDK in **File > Project Structure > Project**, choose **JDK 11** and apply
 - go to root directory of the project and create a `.env` file and add the db information there, plz ask **@Yingfan (Eric) Chen** for the username & password
@@ -46,7 +48,7 @@
 ```
 REACT_APP_UW_LIBRARY_RESERVATION_LINK=https://cal.lib.uw.edu/?_gl=1*1qhpnb6*_ga*MTU2MjcyMzAwNC4xNTc4NTI3Mjk2*_ga_63X2ZQHK8P*MTY3NDgzNzQ1NS4zLjAuMTY3NDgzNzQ1NS4wLjAuMA..
 REACT_APP_GOOGLE_API=<YOUR GOOGLE API KEY>
-REACT_APP_DUBMAP_SERVER=http://localhost:4567/
+REACT_APP_DUBMAP_SERVER=http://35.91.246.29:4567/
 ```
 - to obtain your own Google API key: 
   - Go to the **[Google Maps Platform > Credentials](https://console.cloud.google.com/projectselector2/google/maps-apis/credentials)** page.
