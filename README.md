@@ -22,6 +22,7 @@
 - Have a centralized platform through which the users can explore their options of room reservation through campus
 ---
 
+## User Documentation
 ### How to Run DubMap
 
 > **Note**
@@ -79,13 +80,47 @@ REACT_APP_DUBMAP_SERVER=http://35.91.246.29:4567/
   - **Dining options**: work in progress
 ---
 
-### Known bugs
-- [Issues](https://github.com/yingfc/cse403/issues)
 ### How to Report a bug
 - Go to the above [Issues](https://github.com/yingfc/cse403/issues) page on GitHub UI, and click the new Issue button to report a bug![img.png](screenshots/newIssue.png)
-
+### Known bugs
+- [Issues](https://github.com/yingfc/cse403/issues)
 ---
 
+## Developer Documentation
+### To obtain the source code, run the command `git clone git@github.com:yingfc/cse403.git` to clone the entire project to your local machine.
+
+---
+### Tool sets
+This frontend of this project will be implemented with React and TypeScript and the backend will use SparkJava with Java. The database is hosted on Google Cloud Platform.
+
+### Repository layout
+```
+📦 cse403
+ ┣ 📂 .github.workflow (CI related setting)
+ ┣ 📂 back-end
+ ┃ ┗ 📂 test
+ ┃ ┃ ┗ 📂 navigation (route navigation related test)
+ ┃ ┗ 📂 src
+ ┃   ┗ 📂 db (keeps track of the databases of available rooms and reserved rooms and assign students their reserved rooms)
+ ┃   ┗ 📂 building (class for building endpoint)
+ ┃   ┗ 📂 navigation (classToBuilding demo file)
+ ┃   ┗ 📂 response (Spark response)
+ ┃   ┗ 📜 MySqlDemo.java (demo file to fetch data from database)
+ ┃   ┗ 📜 SparkJavaDemo.java (backend SparkJava server file)
+ ┣ 📂 font-end
+ ┃ ┗ 📂 src
+ ┃   ┗ 📂 components (contains different components of the webpage, subject to further segmentation later on)
+ ┃   ┗ 📂 config (map settings)
+ ┃   ┗ 📂 tests
+ ┣ 📂 reports (weekly reports on progress/reflection)
+ ┃ ┗ 📜 Week3Report.md
+ ┃ ┗ 📜 Week4Report.md
+ ┃ ┗ 📜 Week5Report.md
+ ┃ ┗ 📜 Week6Report.md
+ ┃ ┗ 📜 Week7Report.md
+ ┗ 📜 README.md
+```
+---
 ### How to Run/Add test
 #### Backend
 - To conduct our back-end testing, we are using Junit testing infrastructure using a Gradle build.
@@ -123,39 +158,7 @@ REACT_APP_DUBMAP_SERVER=http://35.91.246.29:4567/
 ### How To Run And Use DubMaps
 - Open Your browser
 - Visit the link https://yingfc.github.io/cse403 (this link is a placeholder)
-- You can now use DubMaps and its functionalities 
----
-
-### Tool sets
-This frontend of this project will be implemented with React and TypeScript and the backend will use SparkJava with Java. The database is hosted on Google Cloud Platform.
-
-### Repository layout
-```
-📦 cse403
- ┣ 📂 .github.workflow (CI related setting)
- ┣ 📂 back-end
- ┃ ┗ 📂 test
- ┃ ┃ ┗ 📂 navigation (route navigation related test)
- ┃ ┗ 📂 src
- ┃   ┗ 📂 db (keeps track of the databases of available rooms and reserved rooms and assign students their reserved rooms)
- ┃   ┗ 📂 building (class for building endpoint)
- ┃   ┗ 📂 navigation (classToBuilding demo file)
- ┃   ┗ 📂 response (Spark response)
- ┃   ┗ 📜 MySqlDemo.java (demo file to fetch data from database)
- ┃   ┗ 📜 SparkJavaDemo.java (backend SparkJava server file)
- ┣ 📂 font-end
- ┃ ┗ 📂 src
- ┃   ┗ 📂 components (contains different components of the webpage, subject to further segmentation later on)
- ┃   ┗ 📂 config (map settings)
- ┃   ┗ 📂 tests
- ┣ 📂 reports (weekly reports on progress/reflection)
- ┃ ┗ 📜 Week3Report.md
- ┃ ┗ 📜 Week4Report.md
- ┃ ┗ 📜 Week5Report.md
- ┃ ┗ 📜 Week6Report.md
- ┃ ┗ 📜 Week7Report.md
- ┗ 📜 README.md
-```
+- You can now use DubMaps and its functionalities
 ---
 
 ### Use Cases
