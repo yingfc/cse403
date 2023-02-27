@@ -28,7 +28,16 @@
 > The database instance hosted on GCP will often-times be turned off to save money for your dev account, if any course staff wants to try out DubMap, please ping Yingfan on Slack.
 
 #### To obtain the source code, run the command `git clone git@github.com:yingfc/cse403.git` to clone the entire project to your local machine.
-#### Backend SparkJava Server
+#### Backend SparkJava Server (Live!!!)
+> **Note**
+> The Backend Server has been deployed to cloud machine on AWS (http://35.91.246.29:4567/hello), and you will not need to run it anymore :) But feel free to continue read if you are interested.
+
+| method type | endpoint                             | example        | description                                                              |
+|-------------|--------------------------------------|----------------|--------------------------------------------------------------------------|
+| GET         | /hello                               | /hello         | welcome page of backend API server                                       |
+| GET         | /buildings                           | /buildings     | show all the buildings on campus                                         |
+| GET         | /building/:abbr                      | /building/CSE2 | show the specific building information given the building's abbreviation |
+| GET         | /class?major=x&coursenum=x&section=x |class?major=CSE&coursenum=484&section=AC| show the specific building information where the class is held           |
 - load the entire project in IntelliJ
 - set up project SDK in **File > Project Structure > Project**, choose **JDK 11** and apply
 - go to root directory of the project and create a `.env` file and add the db information there, plz ask **@Yingfan (Eric) Chen** for the username & password
@@ -46,7 +55,7 @@
 ```
 REACT_APP_UW_LIBRARY_RESERVATION_LINK=https://cal.lib.uw.edu/?_gl=1*1qhpnb6*_ga*MTU2MjcyMzAwNC4xNTc4NTI3Mjk2*_ga_63X2ZQHK8P*MTY3NDgzNzQ1NS4zLjAuMTY3NDgzNzQ1NS4wLjAuMA..
 REACT_APP_GOOGLE_API=<YOUR GOOGLE API KEY>
-REACT_APP_DUBMAP_SERVER=http://localhost:4567/
+REACT_APP_DUBMAP_SERVER=http://35.91.246.29:4567/
 ```
 - to obtain your own Google API key: 
   - Go to the **[Google Maps Platform > Credentials](https://console.cloud.google.com/projectselector2/google/maps-apis/credentials)** page.
@@ -96,6 +105,19 @@ REACT_APP_DUBMAP_SERVER=http://localhost:4567/
 - ![img.png](screenshots/releaseBtn.png)
 - Then fill out the title and description of the release 
 - ![img_1.png](screenshots/releasePage.png)
+---
+
+### How To Deploy DubMaps
+#### Backend
+- We are running our backend API server on AWS EC2 instance (ubuntu linux). 
+- To run the backend server on the instance, first navigate to the repo top level
+- Create an executable jar distribution via running `./gradlew shadowJar`
+- Then open a screen session by typing `screen` in the bash prompt
+- Then run `java -jar build/libs/cse403-1.0-SNAPSHOT-all.jar` to start the SparkJava server
+- Type `CTRL` + `A` followed by `d` to detach your screen session, the script (backend server) will continue to run
+- You can disconnect from the SSH session. And once you log back in, you can resume your session by typing in `screen -r`. This is assuming that you have only one detached session.
+#### Frontend
+- TODO
 ---
 
 ### How To Run And Use DubMaps
