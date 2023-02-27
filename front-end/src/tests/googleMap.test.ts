@@ -3,7 +3,7 @@ import * as ReactGoogleMapsApi from "@react-google-maps/api";
 import axios from "axios";
 
 let page: any;
-
+let browser: any;
 describe.only("Google Map:", () => {
   afterEach(() => {
     jest.useRealTimers();
@@ -11,13 +11,17 @@ describe.only("Google Map:", () => {
   });
 
   beforeAll(async () => {
-    const browser = await puppeteer.launch({
+    browser = await puppeteer.launch({
       headless: true,
     });
     page = await browser.newPage();
 
     await page.goto("http://127.0.0.1:3000");
   }, 10000);
+
+  afterAll(() => {
+    browser.close();
+  })
 
   it("Loading map correctly", async () => {
     jest.setTimeout(10000);
