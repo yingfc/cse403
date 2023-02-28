@@ -127,6 +127,20 @@ This frontend of this project will be implemented with React and TypeScript and 
  ┗ 📜 README.md
 ```
 ---
+### Database
+- We are hosting our MySQL database instance on GCP SQL. 
+- public IP: `34.145.35.221`
+- password: ask @Yingfan (Eric) Chen 
+- instance name: `cse403` 
+- database name: `dubmap_backend`
+- to access mysql instance locally: `mysql --host=34.145.35.221 --user=XXX --password`
+- The database contains the following tables: 
+  - `building` - ![img.png](screenshots/building_table.png)
+  - `class` - ![img.png](screenshots/class_table.png)
+  - `dining` - ![img.png](screenshots/dining_table.png)
+  - `dining_open_hr` - ![img.png](screenshots/dining_open_hr_table.png)
+
+---
 ### How to Run/Add test
 #### Backend
 - To conduct our back-end testing, we are using Junit testing infrastructure using a Gradle build.
