@@ -28,6 +28,9 @@
 > **Note**
 > The database instance hosted on GCP will often-times be turned off to save money for your dev account, if any course staff wants to try out DubMap, please ping Yingfan on Slack.
 
+> **Note**
+> We currently only support CSE courses in our database. So don't be surprised when you get no response from non-CSE class.
+
 #### To obtain the source code, run the command `git clone git@github.com:yingfc/cse403.git` to clone the entire project to your local machine.
 #### Backend SparkJava Server (Live!!!)
 > **Note**
@@ -52,6 +55,9 @@
 - when you see logs saying **Server - Started**, go to `localhost:4567/hello`, and try out all the endpoints
 
 #### Frontend `npm` Server
+> **Note**
+> Before running the frontend server, make sure you've enable location sharing in your browser :)
+
 - to configure the front end, you’ll have to create a `.env` file at the root directory of the front-end.
 ```
 REACT_APP_UW_LIBRARY_RESERVATION_LINK=https://cal.lib.uw.edu/?_gl=1*1qhpnb6*_ga*MTU2MjcyMzAwNC4xNTc4NTI3Mjk2*_ga_63X2ZQHK8P*MTY3NDgzNzQ1NS4zLjAuMTY3NDgzNzQ1NS4wLjAuMA..
