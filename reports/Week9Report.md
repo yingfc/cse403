@@ -64,7 +64,9 @@
 
 **Yigao**:
 
-- TODO
+- Build Dinning detail and Dinning button front end
+- requiring backend data as specific type
+- working on dinning data parse
 
 **Chuteng**:
 
@@ -93,7 +95,8 @@
 
 **Yigao**:
 
-- TODO
+- Dinning options feature development
+- optimizing and organizing frontend features
 
 **Chuteng**:
 
