@@ -81,7 +81,8 @@
 
 **Wajdi**:
 
-- TODO
+- Looked at CI issue
+- Checked code for readiness for peer review
 
 **Yingfan**:
 
@@ -109,7 +110,8 @@
 
 **Wajdi**:
 
-- TODO
+- Finishing touches for final release
+- Help with dining options development
 
 **Yingfan**:
 
