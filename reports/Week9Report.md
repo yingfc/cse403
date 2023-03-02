@@ -68,7 +68,10 @@
 
 **Chuteng**:
 
-- TODO
+- Troubleshot frontend CI issue
+- Researched and Helped deploying frontend server
+- Fixed frontend rendering bugs
+- Optimized frontend code
 
 **Fengyi**:
 
@@ -94,7 +97,8 @@
 
 **Chuteng**:
 
-- TODO
+- Keep looking for better frontend server deployment option
+- Working on other frontend features
 
 **Fengyi**:
 
