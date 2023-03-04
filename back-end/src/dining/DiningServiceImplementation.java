@@ -4,6 +4,7 @@ import dining.DiningInfo;
 import db.GlobalDBCred;
 import spark.QueryParamsMap;
 
+import java.net.Inet4Address;
 import java.sql.*;
 import java.util.*;
 
@@ -18,7 +19,7 @@ public class DiningServiceImplementation implements DiningService{
             // register JDBC driver
             Class.forName(GlobalDBCred.JDBC_DRIVER);
 
-            System.out.print("Link to database");
+            System.out.print("Link to database   ");
             conn = DriverManager.getConnection(GlobalDBCred.DB_URL,GlobalDBCred.USER,GlobalDBCred.PASS);
 
             // querying
