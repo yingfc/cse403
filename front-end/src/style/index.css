@@ -33,3 +33,9 @@ input[type=text]{
   border-radius:1em;
   padding:0.7em 1.4em;
 }
+
+#dinning_detail {
+  margin-left: 80%;
+  width: 20%;
+  height: 100%
+}
