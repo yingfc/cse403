@@ -25,7 +25,7 @@ export function calculateAndDisplayRoute(
     dstLocation: BuildingInfo,
 ) {
     if (dstLocation === undefined || dstLocation.latitude === undefined || dstLocation.longitude === undefined) {
-        window.alert("Destination corresponding to the course does not exist, please check again.")
+        console.error("Destination corresponding to the course does not exist, please check again.")
     }
     directionsService
         .route({

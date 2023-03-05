@@ -3,9 +3,8 @@ import { BuildingInfo } from '..';
 import React from 'react';
 import {calculateAndDisplayRoute} from "../map/Route";
 import {directionsRenderer, directionsService, geo} from "../map/GoogleMap";
-import DinningBtn from './DinningBtn';
 
-export class ClassInfo {
+class ClassInfo {
   major: string;
   courseNum: number;
   section: string;
@@ -21,12 +20,20 @@ const SearchBar: React.FC = () =>{
   const input = document.getElementById('input') as HTMLInputElement;
   const button = document.getElementById("search");
   let buildingInfo: BuildingInfo | null;
+  const patternMatch = (input: string) => {
+    let regex = new RegExp("/[A-Za-z ]*[0-9 ]*[A-Za-z]/g");
+    return input.match(regex);
+  }
   const parseInput = async (input: string) => {
     if (input === "") {
       let container = document.getElementById("error_msg") as HTMLParagraphElement;
       let msg = "Input Error with access to null element"
       container.innerText = msg;
       throw Error(msg);
+    }
+    if (!patternMatch(input)) {
+      alert("Input " + input + " doesn't meet the format, expect major + course number + section");
+      throw Error()
     }
     let numId = input.search(/\d/);
     let major = input.substring(0, numId-1).trim();
@@ -45,15 +52,14 @@ const SearchBar: React.FC = () =>{
 
   return (
   <div id="searchBar">
-    <input id="input" type="text" placeholder='CSE 403 A'/>
+    <input id="input" type="text" placeholder='major num section'/>
     <button id="search" type="button" >Go!</button>
     <p id="error_msg" style={{display: "none"}}></p>
-    <DinningBtn />
   </div>
   )
 };
 
-export async function getBuildingInfoFromClass(cls: ClassInfo) {
+async function getBuildingInfoFromClass(cls: ClassInfo) {
   try {
     const response = await axios.get(process.env.REACT_APP_DUBMAP_SERVER + "class?major=" + cls.major + "&coursenum=" + cls.courseNum + "&section=" + cls.section);
     return response.data.data as BuildingInfo;
