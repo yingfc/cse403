@@ -61,7 +61,7 @@ const SearchBar: React.FC = () =>{
   )
 };
 
-export async function getBuildingInfoFromClass(cls: ClassInfo) {
+async function getBuildingInfoFromClass(cls: ClassInfo) {
   try {
     const response = await axios.get(process.env.REACT_APP_DUBMAP_SERVER + "class?major=" + cls.major + "&coursenum=" + cls.courseNum + "&section=" + cls.section);
     return response.data.data as BuildingInfo;
