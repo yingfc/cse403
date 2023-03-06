@@ -3,9 +3,8 @@ import { BuildingInfo } from '..';
 import React from 'react';
 import {calculateAndDisplayRoute} from "../map/Route";
 import {directionsRenderer, directionsService, geo} from "../map/GoogleMap";
-import DinningBtn from './DinningBtn';
 
-export class ClassInfo {
+class ClassInfo {
   major: string;
   courseNum: number;
   section: string;
@@ -56,12 +55,11 @@ const SearchBar: React.FC = () =>{
     <input id="input" type="text" placeholder='major num section'/>
     <button id="search" type="button" >Go!</button>
     <p id="error_msg" style={{display: "none"}}></p>
-    <DinningBtn />
   </div>
   )
 };
 
-export async function getBuildingInfoFromClass(cls: ClassInfo) {
+async function getBuildingInfoFromClass(cls: ClassInfo) {
   try {
     const response = await axios.get(process.env.REACT_APP_DUBMAP_SERVER + "class?major=" + cls.major + "&coursenum=" + cls.courseNum + "&section=" + cls.section);
     return response.data.data as BuildingInfo;
