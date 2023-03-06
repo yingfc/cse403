@@ -36,6 +36,8 @@
 > **Note**
 > The Backend Server has been deployed to cloud machine on AWS (http://35.91.246.29:4567/hello), and you will not need to run it anymore :) But feel free to continue read if you are interested.
 
+We do have OpenAPI 3.0 documentation here: https://app.swaggerhub.com/apis/yingfc/DubMap/0.1#/default/get_class
+
 | method type | endpoint                             | example                                   | description                                                             |
 |-------------|--------------------------------------|-------------------------------------------|-------------------------------------------------------------------------|
 | GET         | /hello                               | /hello                                    | welcome page of backend API server                                      |
