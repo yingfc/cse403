@@ -21,12 +21,12 @@ public class SparkJavaDemo {
                 new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(buildingService.getAllBuildings()))
             );
         });
-        get("/building/:abbr", (req, res) -> {
+        get("/building", (req, res) -> {
             res.header("Access-Control-Allow-Origin", "*");
             res.header("Access-Control-Allow-Headers", "*");
             res.type("application/json");
             return new Gson().toJson(
-                    new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(buildingService.getBuilding(req.params(":abbr"))))
+                    new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(buildingService.getBuilding(req.queryParams("abbr"))))
             );
         });
 

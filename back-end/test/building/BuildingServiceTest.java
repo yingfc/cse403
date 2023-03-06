@@ -1,14 +1,9 @@
 package building;
 
 import org.junit.Test;
-import spark.QueryParamsMap;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletRequestWrapper;
 import java.sql.SQLException;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.junit.Assert.*;
 
