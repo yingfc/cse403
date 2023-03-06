@@ -36,13 +36,13 @@
 > **Note**
 > The Backend Server has been deployed to cloud machine on AWS (http://35.91.246.29:4567/hello), and you will not need to run it anymore :) But feel free to continue read if you are interested.
 
-| method type | endpoint                             | example                                  | description                                                             |
-|-------------|--------------------------------------|------------------------------------------|-------------------------------------------------------------------------|
-| GET         | /hello                               | /hello                                   | welcome page of backend API server                                      |
-| GET         | /buildings                           | /buildings                               | show all the buildings on campus                                        |
-| GET         | /building/:abbr                      | /building/CSE2                           | show the specific building information given the building's abbreviation |
+| method type | endpoint                             | example                                   | description                                                             |
+|-------------|--------------------------------------|-------------------------------------------|-------------------------------------------------------------------------|
+| GET         | /hello                               | /hello                                    | welcome page of backend API server                                      |
+| GET         | /buildings                           | /buildings                                | show all the buildings on campus                                        |
+| GET         | /building?abbr=x                     | /building?abbr=CSE2                       | show the specific building information given the building's abbreviation |
 | GET         | /class?major=x&coursenum=x&section=x | /class?major=CSE&coursenum=484&section=AC | show the specific building information where the class is held          |
-| GET         | /diningplaces                        | /diningplaces                            | show the dining/cafe with opening hour and if it is currently open      |
+| GET         | /diningplaces                        | /diningplaces                             | show the dining/cafe with opening hour and if it is currently open      |
 - load the entire project in IntelliJ
 - set up project SDK in **File > Project Structure > Project**, choose **JDK 11** and apply
 - go to root directory of the project and create a `.env` file and add the db information there, plz ask **@Yingfan (Eric) Chen** for the username & password
