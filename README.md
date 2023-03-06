@@ -63,13 +63,16 @@ We do have OpenAPI 3.0 documentation here: https://app.swaggerhub.com/apis/yingf
 
 #### Frontend `npm` Server
 > **Note**
+> The Front Server has also been deployed and it is live (https://dubmap.herokuapp.com/), and you will not need to run it anymore :) But feel free to continue read if you are interested.
+
+> **Note**
 > Before running the frontend server, make sure you've enable location sharing in your browser :)
 
 - to configure the front end, you’ll have to create a `.env` file at the root directory of the front-end.
 ```
 REACT_APP_UW_LIBRARY_RESERVATION_LINK=https://cal.lib.uw.edu/?_gl=1*1qhpnb6*_ga*MTU2MjcyMzAwNC4xNTc4NTI3Mjk2*_ga_63X2ZQHK8P*MTY3NDgzNzQ1NS4zLjAuMTY3NDgzNzQ1NS4wLjAuMA..
 REACT_APP_GOOGLE_API=<YOUR GOOGLE API KEY>
-REACT_APP_DUBMAP_SERVER=http://35.91.246.29:4567/
+REACT_APP_DUBMAP_SERVER=https://o8cid9vnb1.execute-api.us-west-2.amazonaws.com/
 ```
 - to obtain your own Google API key: 
   - Go to the **[Google Maps Platform > Credentials](https://console.cloud.google.com/projectselector2/google/maps-apis/credentials)** page.
