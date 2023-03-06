@@ -21,7 +21,7 @@ const SearchBar: React.FC = () =>{
   const button = document.getElementById("search");
   let buildingInfo: BuildingInfo | null;
   const patternMatch = (input: string) => {
-    let regex = /^[A-Za-z ]*[0-9 ]*[A-Za-z]$/g;
+    let regex = /^[A-Za-z ]*[0-9 ]*[A-Za-z]*$/g;
     return input.match(regex);
   }
   const parseInput = async (input: string) => {
