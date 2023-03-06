@@ -181,6 +181,7 @@ This frontend of this project will be implemented with React and TypeScript and 
 - Then run `java -jar build/libs/cse403-1.0-SNAPSHOT-all.jar` to start the SparkJava server
 - Type `CTRL` + `A` followed by `d` to detach your screen session, the script (backend server) will continue to run
 - You can disconnect from the SSH session. And once you log back in, you can resume your session by typing in `screen -r`. This is assuming that you have only one detached session.
+- Set up AWS API gateway(future devs don't need to do this again) to redirect incoming HTTPS request to our running server above. HTTPS is required because of the fact that the get current location functionality (from `navigator.geolocation.getCurrentPosition` API) only works under SSL.
 #### Frontend
 - TODO
 ---
