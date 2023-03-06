@@ -55,6 +55,7 @@ const SearchBar: React.FC = () =>{
     <input id="input" type="text" placeholder='major num section'/>
     <button id="search" type="button" >Go!</button>
     <p id="error_msg" style={{display: "none"}}></p>
+    <button id="dinning">Show Dinning Option</button>
   </div>
   )
 };
