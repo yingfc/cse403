@@ -21,6 +21,10 @@
   class code, and the user would be able to get a list of classes in the building.
 - Have a centralized platform through which the users can explore their options of room reservation through campus
 ---
+### Tech Stacks
+[![My Tech Stack](https://github-readme-tech-stack.vercel.app/api/cards?title=DubMap%20Tech%20Stack&lineCount=4&theme=github_dark&line1=java,java,601e7c;typescript,typescript,f6407f;npm,npm,a1f3f7;node.js,node.js,cba390;&line2=amazon%20ec2,amazon%20ec2,3dc33f;Amazon%20API%20gateway,Amazon%20API%20gateway,1fd149;&line3=google%20cloud,google%20cloud,66f8bd;google%20maps,google%20maps,dff6d8;&line4=heroku,heroku,f9973f;gradle,gradle,f1c399;mysql,mysql,a6b4ac;)](https://github-readme-tech-stack.vercel.app/api/cards?title=DubMap%20Tech%20Stack&lineCount=4&theme=github_dark&line1=java,java,601e7c;typescript,typescript,f6407f;npm,npm,a1f3f7;node.js,node.js,cba390;&line2=amazon%20ec2,amazon%20ec2,3dc33f;Amazon%20API%20gateway,Amazon%20API%20gateway,1fd149;&line3=google%20cloud,google%20cloud,66f8bd;google%20maps,google%20maps,dff6d8;&line4=heroku,heroku,f9973f;gradle,gradle,f1c399;mysql,mysql,a6b4ac;)
+
+---
 
 ## User Documentation
 ### How to Run DubMap
