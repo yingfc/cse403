@@ -69,7 +69,7 @@ class BuildingGenerator extends Component<BuildingProps> {
 
 export async function getBuildingInfoFromBuildingAbbr(buildingAbbr: string) {
   try {
-    const response = await axios.get(process.env.REACT_APP_DUBMAP_SERVER + "building/" + buildingAbbr);
+    const response = await axios.get(process.env.REACT_APP_DUBMAP_SERVER + "building?abbr=" + buildingAbbr);
     console.log(response);
     return response.data.data as BuildingInfo;
   } catch (e) {
