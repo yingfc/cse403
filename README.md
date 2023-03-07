@@ -93,7 +93,7 @@ REACT_APP_DUBMAP_SERVER=https://o8cid9vnb1.execute-api.us-west-2.amazonaws.com/
   - ![img.png](screenshots/routeNavigation.png)
   - **Room reservation**: On the map homepage, user can hover over the mouse to buildings that are open for room reservation, and an info window will pop up right next to the building with clickable words for user to redirect to the corresponding reservation webpage. Then the user can book a room there. 
   - ![img.png](screenshots/roomReservation.png)
-  - **Dining options**: work in progress
+  - **Dining options**: On the map homepage, user can click the "Show Dining Options" button to see information about open dining options (restaurant/cafe). Should they choose a dining option and click on it, the user will be provided with a navigation path to the selected option.
 ---
 
 ### How to Report a bug
@@ -183,12 +183,12 @@ This frontend of this project will be implemented with React and TypeScript and 
 - You can disconnect from the SSH session. And once you log back in, you can resume your session by typing in `screen -r`. This is assuming that you have only one detached session.
 - Set up AWS API gateway(future devs don't need to do this again) to redirect incoming HTTPS request to our running server above. HTTPS is required because of the fact that the get current location functionality (from `navigator.geolocation.getCurrentPosition` API) only works under SSL.
 #### Frontend
-- TODO
+- Frontend is now deployed on https://dubmap.herokuapp.com/
 ---
 
 ### How To Run And Use DubMaps
 - Open Your browser
-- Visit the link https://yingfc.github.io/cse403 (this link is a placeholder)
+- Visit the link https://dubmap.herokuapp.com/
 - You can now use DubMaps and its functionalities
 ---
 
@@ -197,5 +197,5 @@ Ready for Beta Release (Feb 14th)
 - **Route navigation**: User can now enter course information (e.g. CSE 403 A) in the search bar and the map will show the navigation path from user's current location to the target building where the class is held.
 - **Room reservation**: User can now hover over to the building/library that are available for reservation, and a info window will show up with clickable link for the user to be redirected to the UW reservation system for room booking.
 
-Work in Progress
+Ready for Final Release (March 7th)
 - **Dining options**: User should be able to click a "show nearby dining options" button to see a list of currently opening restaurants around campus. And upon clicking the specific restaurant, it will show the navigation path to the dining/cafe on the map.
