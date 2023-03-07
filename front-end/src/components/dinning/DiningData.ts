@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export interface DiningType {
   timeList: timeStamp[];
   buildingAbbr: string;
@@ -14,4 +16,11 @@ interface timeStamp {
   closeTime: string;
 }
 
-export const diningData: DiningType[] = [];
+export async function getDiningData(): Promise<DiningType[]> {
+  const response = await axios.get(
+    process.env.REACT_APP_DUBMAP_SERVER + "diningplaces"
+  );
+
+  console.log(response.data.data);
+  return response.data.data;
+}

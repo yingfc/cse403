@@ -1,5 +1,5 @@
 import GoogleMapComponent from "./map/GoogleMap";
-import BuildingGenerator from "./building_info/BuildingGenerator";
+import {BuildingGenerator} from "./building_info/BuildingGenerator";
 import SearchBar from "./menu/SearchBar";
 import axios from "axios";
 import { useEffect, useState } from "react";

@@ -12,7 +12,7 @@ export const reservable: Map<string, string> = new Map<string, string>([["ALB", 
 ["PCAR","https://cal.lib.uw.edu/reserve/foster-group-study"],
 ["SUZ","https://cal.lib.uw.edu/spaces?lid=1449&gid=0"]]);
 
-class BuildingGenerator extends Component<BuildingProps> {
+export class BuildingGenerator extends Component<BuildingProps> {
   parseBuildings (): JSX.Element[] {
     let env : JSX.Element[] = [];
     for (let i = 0; i < this.props.buildings.length; i++) {
@@ -41,22 +41,11 @@ class BuildingGenerator extends Component<BuildingProps> {
       <div>
         {this.parseBuilding(props)}
       </div>
-      <button className='navigate' onClick={() => this.navigate(props)}>Go To</button>
+      <button className='navigate' onClick={() => navigate(props)}>Go To</button>
     </div>
     return block;
   }
 
-  // show the route from user current location to selected building.
-  async navigate(props: BuildingInfo): Promise<void> {
-    let buildingInfo = props;
-    console.log("navigate: " + buildingInfo?.buildingAbbr + " " + buildingInfo?.latitude + ", " + buildingInfo?.longitude);
-
-    try{
-      calculateAndDisplayRoute(directionsService, directionsRenderer, geo.currLat!, geo.currLong!, buildingInfo!);
-    } catch (e) {
-      console.error("Input Error with access to null element: " + e);
-    }
-  }
 
   render() {
     return <React.StrictMode>
@@ -78,4 +67,14 @@ export async function getBuildingInfoFromBuildingAbbr(buildingAbbr: string) {
   }
 }
 
-export default BuildingGenerator;
+// show the route from user current location to selected building.
+export async function navigate(props: BuildingInfo): Promise<void> {
+  let buildingInfo = props;
+  console.log("navigate: " + buildingInfo?.buildingAbbr + " " + buildingInfo?.latitude + ", " + buildingInfo?.longitude);
+
+  try{
+    calculateAndDisplayRoute(directionsService, directionsRenderer, geo.currLat!, geo.currLong!, buildingInfo!);
+  } catch (e) {
+    console.error("Input Error with access to null element: " + e);
+  }
+}
