@@ -4,6 +4,7 @@ import SearchBar from "./menu/SearchBar";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import React from "react";
+import DiningComponent from "./dinning/DiningComponent";
 
 export interface BuildingInfo {
   buildingAbbr: string;
@@ -38,6 +39,7 @@ export function Components(){
   return (
     <div>
       <SearchBar />
+      <DiningComponent />
       <BuildingGenerator buildings={buildings}/>
       <GoogleMapComponent buildings={buildings}/>
     </div>

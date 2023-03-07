@@ -39,3 +39,21 @@ input[type=text]{
   width: 20%;
   height: 100%
 }
+
+.sidebar {
+  height: 100%;
+  padding-left: 20px;
+  background-color: #4b2e83;
+  opacity: 0.8;
+  color: white;
+  width: 30%;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  z-index: 200;
+  animation: slide-open 1s forwards;
+}
+
+@keyframes slide-open {
+  100% {right: 0}
+}
