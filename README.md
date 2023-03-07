@@ -93,7 +93,7 @@ REACT_APP_DUBMAP_SERVER=https://o8cid9vnb1.execute-api.us-west-2.amazonaws.com/
   - ![img.png](screenshots/routeNavigation.png)
   - **Room reservation**: On the map homepage, user can hover over the mouse to buildings that are open for room reservation, and an info window will pop up right next to the building with clickable words for user to redirect to the corresponding reservation webpage. Then the user can book a room there. 
   - ![img.png](screenshots/roomReservation.png)
-  - **Dining options**: work in progress
+  - **Dining options**: On the mao homepage, user can click the "Show Dining Options" button to see information about open dining options. Should they choose a dining option and click on it, the user will be provided with a navigation path to the selected option.
 ---
 
 ### How to Report a bug
@@ -183,12 +183,12 @@ This frontend of this project will be implemented with React and TypeScript and 
 - You can disconnect from the SSH session. And once you log back in, you can resume your session by typing in `screen -r`. This is assuming that you have only one detached session.
 - Set up AWS API gateway(future devs don't need to do this again) to redirect incoming HTTPS request to our running server above. HTTPS is required because of the fact that the get current location functionality (from `navigator.geolocation.getCurrentPosition` API) only works under SSL.
 #### Frontend
-- TODO
+- Frontend is now deployed on https://dubmap.herokuapp.com/
 ---
 
 ### How To Run And Use DubMaps
 - Open Your browser
-- Visit the link https://yingfc.github.io/cse403 (this link is a placeholder)
+- Visit the link https://dubmap.herokuapp.com/
 - You can now use DubMaps and its functionalities
 ---
 
