@@ -53,7 +53,7 @@ We do have OpenAPI 3.0 documentation here: https://app.swaggerhub.com/apis/yingf
 - set up project SDK in **File > Project Structure > Project**, choose **JDK 11** and apply
 - go to root directory of the project and create a `.env` file and add the db information there, plz ask **@Yingfan (Eric) Chen** for the username & password
 ```
-  DB_URL="jdbc:mysql://34.145.35.221/dubmap_backend?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=PST"
+  DB_URL="jdbc:mysql://34.127.88.71/dubmap_backend?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=PST"
   DB_USER=""
   DB_PASSWORD=""
 ```
@@ -139,11 +139,11 @@ This frontend of this project will be implemented with React and TypeScript and 
 ---
 ### Database
 - We are hosting our MySQL database instance on GCP SQL. 
-- public IP: `34.145.35.221`
+- public IP: `34.127.88.71`
 - password: ask @Yingfan (Eric) Chen 
-- instance name: `cse403` 
+- instance name: `dubmap` 
 - database name: `dubmap_backend`
-- to access mysql instance locally: `mysql --host=34.145.35.221 --user=XXX --password`
+- to access mysql instance locally: `mysql --host=34.127.88.71 --user=XXX --password`
 - The database contains the following tables: 
   - `building` - ![img.png](screenshots/building_table.png)
   - `class` - ![img.png](screenshots/class_table.png)
