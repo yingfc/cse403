@@ -67,7 +67,8 @@
 
 **Chuteng**:
 
-- TODO
+- Deployed Frontend
+- Added new feature: Dining Options
 
 **Fengyi**:
 
