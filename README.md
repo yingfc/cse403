@@ -94,6 +94,8 @@ REACT_APP_DUBMAP_SERVER=https://o8cid9vnb1.execute-api.us-west-2.amazonaws.com/
   - **Room reservation**: On the map homepage, user can hover over the mouse to buildings that are open for room reservation, and an info window will pop up right next to the building with clickable words for user to redirect to the corresponding reservation webpage. Then the user can book a room there. 
   - ![img.png](screenshots/roomReservation.png)
   - **Dining options**: On the map homepage, user can click the "Show Dining Options" button to see information about open dining options (restaurant/cafe). Should they choose a dining option and click on it, the user will be provided with a navigation path to the selected option.
+  - ![img.png](screenshots/diningOption.png)
+
 ---
 
 ### How to Report a bug
@@ -129,11 +131,6 @@ This frontend of this project will be implemented with React and TypeScript and 
  ┃   ┗ 📂 config (map settings)
  ┃   ┗ 📂 tests
  ┣ 📂 reports (weekly reports on progress/reflection)
- ┃ ┗ 📜 Week3Report.md
- ┃ ┗ 📜 Week4Report.md
- ┃ ┗ 📜 Week5Report.md
- ┃ ┗ 📜 Week6Report.md
- ┃ ┗ 📜 Week7Report.md
  ┗ 📜 README.md
 ```
 ---
