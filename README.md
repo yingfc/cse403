@@ -1,6 +1,6 @@
 # CSE403 Software Engineering
 
-## Project: DubMap
+## Project: DubMap (https://dubmap.herokuapp.com)
 
 #### This DubMap project will be an all-in-one campus map platform for UW that would allow users with easy navigation between classes, access to on-campus dining information, and bookings/reservations to the UW buildings and facilities on campus. 
 
