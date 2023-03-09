@@ -63,8 +63,7 @@
 
 **Yigao**:
 
-- TODO
-
+- Add new function: search bar input format check
 **Chuteng**:
 
 - Deployed Frontend
