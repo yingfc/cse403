@@ -32,6 +32,7 @@ input[type=text]{
   border: 5px solid rebeccapurple;
   border-radius:1em;
   padding:0.7em 1.4em;
+  width: 250px;
 }
 
 #dinning_detail {
