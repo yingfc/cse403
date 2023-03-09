@@ -77,7 +77,8 @@
 
 **Wajdi**:
 
-- TODO
+- Minor changes to README and new USERGUIDE file
+- Reviewd changes and pull requests
 
 **Yingfan**:
 
