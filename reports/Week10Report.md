@@ -47,7 +47,7 @@
 
 **Fengyi**:
 
-- TODO
+- Dining option backend development
 
 **Wajdi**:
 
@@ -72,7 +72,8 @@
 
 **Fengyi**:
 
-- TODO
+- Finish dining option backend development
+- Add dining option backend test
 
 **Wajdi**:
 
